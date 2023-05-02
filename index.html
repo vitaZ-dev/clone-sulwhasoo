@@ -140,7 +140,32 @@
       </header>
 
       <!-- 캐러셀 슬라이드 -->
-      <section class="carousel"></section>
+      <section class="carousel">
+        <div class="wrapper">
+          <button class="sw-btn sw-prev"></button>
+          <button class="sw-btn sw-next"></button>
+          <!-- Carousel Swiper -->
+          <div class="swiper sw-carousel">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#carousel01">
+                  <picture>
+                    <source
+                      srcset="/images/silde01_small.jpg"
+                      media="(max-width: 720px)"
+                    />
+                    <source
+                      srcset="/images/silde01_med.jpg"
+                      media="(max-width: 1024px)"
+                    />
+                    <img src="/images/slide01_large.jpg" alt="slide01" />
+                  </picture>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- 설화수 추천 -->
       <section class="recommend"></section>
