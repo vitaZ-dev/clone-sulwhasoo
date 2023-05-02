@@ -28,9 +28,39 @@ body {
   letter-spacing: -0.64px;
   word-break: keep-all;
 }
+button {
+	border: none;
+	cursor: pointer;
+}
 
 /* 공통클래스 */
+.wrap {
+  position: relative;
+}
 .inner {
   width: 1440px;
   margin: 0 auto;
+}
+.clearfix::after {
+  display: block;
+  position: relative;
+  content: "";
+  width: 100%;
+  clear: both;
+}
+
+/* 공통클래스 - swiper */
+.sw-btn {
+  position: absolute;
+  top: 50%;
+  background: rgba(255, 255, 255, 0.4) no-repeat center;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+.sw-prev {
+  left: 0;
+  transform: translateY(-50%) rotate(180deg);
+}
+.sw-next {
+  right: 0;
 }
