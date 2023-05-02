@@ -28,3 +28,9 @@ body {
   letter-spacing: -0.64px;
   word-break: keep-all;
 }
+/* 공통클래스 */
+.inner {
+  width: 1440px;
+}
+
+
