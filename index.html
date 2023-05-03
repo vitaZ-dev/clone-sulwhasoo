@@ -112,6 +112,14 @@
                 <li><a href="#">ประเทศไทย/ไทย</a></li>
                 <li><a href="#">USA/English</a></li>
               </ul>
+              <script>
+                let langBtn = document.querySelector(".language-toggle");
+                let langBtn_con = document.querySelector(".select-language");
+                langBtn.addEventListener("click", () => {
+                  langBtn.classList.toggle("language-selected");
+                  langBtn_con.classList.toggle("language-selected-active");
+                });
+              </script>
             </div>
             <div class="top-link clearfix">
               <a href="#" class="find-store-link">매장찾기</a>
