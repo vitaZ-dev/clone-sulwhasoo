@@ -280,8 +280,8 @@
         <div class="inner">
           <h2 class="section-title">설화수 추천</h2>
           <div class="section-slide">
-            <button class="sw-btn sw-prev">이전</button>
-            <button class="sw-btn sw-next">다음</button>
+            <button class="sw-btn sw-prev"></button>
+            <button class="sw-btn sw-next"></button>
             <!-- recommend Swiper -->
             <div class="swiper sw-recommend">
               <div class="swiper-wrapper">
@@ -377,6 +377,7 @@
           <!-- progress bar -->
           <div class="pagination-wrapper">
             <div class="swiper-pagination"></div>
+            <!-- swiper control-btn -->
             <button class="sw-stop"></button>
           </div>
           <!-- Initialize Swiper -->
@@ -400,6 +401,19 @@
                 el: ".recommend .swiper-pagination",
                 type: "progressbar",
               },
+            });
+            // stop & play 버튼
+            let stopBtn = document.querySelector(".sw-stop");
+            let container = document.querySelector(".sw-recommend");
+            stopBtn.addEventListener("click", () => {
+              container.classList.toggle("slide--stop");
+              if (container.classList.contains("slide--stop")) {
+                swiper.autoplay.stop();
+                stopBtn.style.backgroundImage = `url("../../images/play.png")`;
+              } else {
+                swiper.autoplay.start();
+                stopBtn.style.backgroundImage = `url("../../images/stop.png")`;
+              }
             });
           </script>
         </div>
