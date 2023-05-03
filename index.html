@@ -151,78 +151,78 @@
                 <a href="#carousel01">
                   <picture>
                     <source
-                      srcset="/images/silde01_small.jpg"
+                      srcset="/images/slide01_720.jpg"
                       media="(max-width: 720px)"
                     />
                     <source
-                      srcset="/images/silde01_med.jpg"
+                      srcset="/images/slide01_1024.jpg"
                       media="(max-width: 1024px)"
                     />
-                    <img src="/images/slide01_large.jpg" alt="slide01" />
+                    <img src="/images/slide01.jpg" alt="slide01" />
                   </picture>
                   <div class="slide-info">
                     <div class="inner">
-                      <p>Amore mall (4.24-5.7)</p>
-                      <p>감사의 마음을 담아요</p>
+                      <p>NEW BRAND FILM</p>
+                      <p>인삼, 아름다움 그리고 설화수</p>
                     </div>
                   </div>
                 </a>
               </div>
               <!-- 임시 -->
               <div class="swiper-slide">
-                <a href="#carousel01">
+                <a href="#carousel02">
                   <picture>
                     <source
-                      srcset="/images/silde01_small.jpg"
+                      srcset="/images/slide02_720.jpg"
                       media="(max-width: 720px)"
                     />
                     <source
-                      srcset="/images/silde01_med.jpg"
+                      srcset="/images/slide02_1024.jpg"
                       media="(max-width: 1024px)"
                     />
-                    <img src="/images/slide01_large.jpg" alt="slide01" />
+                    <img src="/images/slide02.jpg" alt="slide02" />
                   </picture>
                   <div class="slide-info">
                     <div class="inner">
-                      <p>Amore mall (4.24-5.7)</p>
-                      <p>감사의 마음을 담아요</p>
+                      <p>SULWHASOO FIRST CARE ACTIVATING SERUM VI</p>
+                      <p>윤조에센스 6세대</p>
                     </div>
                   </div>
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="#carousel01">
+                <a href="#carousel03">
                   <picture>
                     <source
-                      srcset="/images/silde01_small.jpg"
+                      srcset="/images/slide03_720.jpg"
                       media="(max-width: 720px)"
                     />
                     <source
-                      srcset="/images/silde01_med.jpg"
+                      srcset="/images/slide03_1024.jpg"
                       media="(max-width: 1024px)"
                     />
-                    <img src="/images/slide01_large.jpg" alt="slide01" />
+                    <img src="/images/slide03.jpg" alt="slide03" />
                   </picture>
                   <div class="slide-info">
                     <div class="inner">
-                      <p>Amore mall (4.24-5.7)</p>
-                      <p>감사의 마음을 담아요</p>
+                      <p>Global Ambassador</p>
+                      <p>설화수, 그리고 ROSÉ</p>
                     </div>
                   </div>
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="#carousel01">
+                <a href="#carousel04">
                   <picture>
                     <source
-                      srcset="/images/silde01_small.jpg"
+                      srcset="/images/slide04_720.jpg"
                       media="(max-width: 720px)"
                     />
                     <source
-                      srcset="/images/silde01_med.jpg"
+                      srcset="/images/slide04_1024.jpg"
                       media="(max-width: 1024px)"
                     />
-                    <img src="/images/slide01_large.jpg" alt="slide01" />
+                    <img src="/images/slide04.jpg" alt="slide04" />
                   </picture>
                   <div class="slide-info">
                     <div class="inner">
@@ -239,7 +239,7 @@
           <div class="pagination-container">
             <div class="swiper-pagination"></div>
             <!-- swiper control-btn -->
-            <button class="slide-control">진행중</button>
+            <button class="slide-control"></button>
           </div>
           <script>
             var swipers = new Swiper(".sw-carousel", {
@@ -267,10 +267,10 @@
               box.classList.toggle("slides--stop");
               if (box.classList.contains("slides--stop")) {
                 swipers.autoplay.stop();
-                stop.innerText = "가자";
+                stop.style.backgroundImage = `url("../../images/carousel_play.png")`;
               } else {
                 swipers.autoplay.start();
-                stop.innerText = "멈춰";
+                stop.style.backgroundImage = `url("../../images/carousel_stop.png")`;
               }
             });
           </script>
