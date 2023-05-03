@@ -5,16 +5,12 @@
   left: 0;
   z-index: 99;
   width: 100%;
-  background-color: darkgrey;
+  background-color: transparent;
 
   font-size: 15px;
   color: #fff;
 
   transition: all 0.5s;
-}
-.header:hover {
-  background: #fff;
-  color: #000;
 }
 .header .inner {
   max-width: 1110px;
@@ -48,6 +44,18 @@
   padding-top: 20px;
 
   font-size: 15px;
+}
+
+.language-toggle::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 14px;
+  height: 8px;
+  margin-left: 10px;
+  transform: translateY(-25%);
+  background: url("../../images/hd_arrow_white.png") no-repeat center;
+  background-size: contain;
 }
 
 .top-link > a {
@@ -118,3 +126,18 @@
   opacity: 1;
 }
 /* //여긴 보류 */
+
+.header:hover {
+  background: #fff;
+  color: #000;
+}
+.header:hover .logo-title {
+  background-image: url("/images/logo_orange.png");
+}
+.header:hover .search-btn > .icon-search {
+  background-image: url("/images/icon_search_black.png");
+}
+.header:hover .language-toggle::after {
+  content: "";
+  background-image: url("../../images/hd_arrow_black.png");
+}
