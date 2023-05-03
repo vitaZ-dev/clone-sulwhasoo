@@ -235,11 +235,42 @@
               <!-- //임시 -->
             </div>
           </div>
+          <script>
+            var swipers = new Swiper(".sw-carousel", {
+              slidesPerView: 1,
+              speed: 1000, //1s
+              loop: true,
+              autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+              },
+              navigation: {
+                nextEl: ".carousel .sw-next",
+                prevEl: ".carousel .sw-prev",
+              },
+            });
+          </script>
         </div>
       </section>
 
       <!-- 설화수 추천 -->
-      <section class="recommend"></section>
+      <section class="recommend">
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <hr />
+        <hr />
+        <hr />
+        <hr />
+        <hr />
+        <hr />
+        <hr />
+        <hr />
+        <hr />
+        <hr />
+        <button>
+          <img src="images/carousel_play.png" alt="" />
+          <img src="images/carousel_stop.png" alt="" />
+        </button>
+      </section>
 
       <!-- 베스트 셀러 -->
       <!-- <section class="best-seller">
