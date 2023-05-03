@@ -1,6 +1,6 @@
-@import url("base/basic.css");
+@import url("font.css");
 @import url("base/reset.css");
-
+@import url("base/basic.css");
 @import url("section/header.css");
 @import url("section/carousel.css");
 @import url("section/recommend.css");
