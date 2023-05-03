@@ -279,14 +279,129 @@
       <section class="recommend">
         <div class="inner">
           <h2 class="section-title">설화수 추천</h2>
-          <!-- Recommend Swiper -->
-          <div class="swiper sw-recommend">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="#recommend01"></a>
+          <div class="section-slide">
+            <button class="sw-btn sw-prev">이전</button>
+            <button class="sw-btn sw-next">다음</button>
+            <!-- recommend Swiper -->
+            <div class="swiper sw-recommend">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#recommend01">
+                    <div class="goods-img">
+                      <img src="./images/recommend01.jpg" alt="recommend01" />
+                    </div>
+                    <div class="goods-info">
+                      <p class="goods-info-title">자음생세럼</p>
+                      <p class="goods-info-desc">
+                        Concentrated Ginseng Renewing Serum EX
+                      </p>
+                      <p class="goods-info-price">220,000원</p>
+                    </div>
+                  </a>
+                </div>
+                <!-- 임시 -->
+                <div class="swiper-slide">
+                  <a href="#recommend01">
+                    <div class="goods-img">
+                      <img src="./images/recommend01.jpg" alt="recommend01" />
+                    </div>
+                    <div class="goods-info">
+                      <p class="goods-info-title">자음생세럼</p>
+                      <p class="goods-info-desc">
+                        Concentrated Ginseng Renewing Serum EX
+                      </p>
+                      <p class="goods-info-price">220,000원</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#recommend01">
+                    <div class="goods-img">
+                      <img src="./images/recommend01.jpg" alt="recommend01" />
+                    </div>
+                    <div class="goods-info">
+                      <p class="goods-info-title">자음생세럼</p>
+                      <p class="goods-info-desc">
+                        Concentrated Ginseng Renewing Serum EX
+                      </p>
+                      <p class="goods-info-price">220,000원</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#recommend01">
+                    <div class="goods-img">
+                      <img src="./images/recommend01.jpg" alt="recommend01" />
+                    </div>
+                    <div class="goods-info">
+                      <p class="goods-info-title">자음생세럼</p>
+                      <p class="goods-info-desc">
+                        Concentrated Ginseng Renewing Serum EX
+                      </p>
+                      <p class="goods-info-price">220,000원</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#recommend01">
+                    <div class="goods-img">
+                      <img src="./images/recommend01.jpg" alt="recommend01" />
+                    </div>
+                    <div class="goods-info">
+                      <p class="goods-info-title">자음생세럼</p>
+                      <p class="goods-info-desc">
+                        Concentrated Ginseng Renewing Serum EX
+                      </p>
+                      <p class="goods-info-price">220,000원</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#recommend01">
+                    <div class="goods-img">
+                      <img src="./images/recommend01.jpg" alt="recommend01" />
+                    </div>
+                    <div class="goods-info">
+                      <p class="goods-info-title">자음생세럼</p>
+                      <p class="goods-info-desc">
+                        Concentrated Ginseng Renewing Serum EX
+                      </p>
+                      <p class="goods-info-price">220,000원</p>
+                    </div>
+                  </a>
+                </div>
+                <!-- //임시 -->
               </div>
             </div>
           </div>
+          <!-- progress bar -->
+          <div class="pagination-wrapper">
+            <div class="swiper-pagination"></div>
+            <button class="sw-stop"></button>
+          </div>
+          <!-- Initialize Swiper -->
+          <script>
+            var swiper = new Swiper(".sw-recommend", {
+              slidesPerView: 3,
+              slidesPerGroup: 3, // 한번에 슬라이드할 아이템 개수
+              spaceBetween: 24,
+              speed: 1000, //1s
+              loop: true,
+              autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+              },
+              navigation: {
+                nextEl: ".recommend .sw-next",
+                prevEl: ".recommend .sw-prev",
+              },
+              //progress bar
+              pagination: {
+                el: ".recommend .swiper-pagination",
+                type: "progressbar",
+              },
+            });
+          </script>
         </div>
       </section>
 
