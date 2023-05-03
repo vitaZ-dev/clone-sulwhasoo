@@ -235,6 +235,10 @@
               <!-- //임시 -->
             </div>
           </div>
+          <!-- swiper pagination -->
+          <div class="pagination-container">
+            <div class="swiper-pagination"></div>
+          </div>
           <script>
             var swipers = new Swiper(".sw-carousel", {
               slidesPerView: 1,
@@ -247,6 +251,11 @@
               navigation: {
                 nextEl: ".carousel .sw-next",
                 prevEl: ".carousel .sw-prev",
+              },
+              //progress bar ~> 너비랑 색깔만 다시주면 됨+위치도
+              pagination: {
+                el: ".carousel .swiper-pagination",
+                type: "progressbar",
               },
             });
           </script>
