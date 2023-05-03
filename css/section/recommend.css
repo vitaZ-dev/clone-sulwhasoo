@@ -1,0 +1,7 @@
+.recommend .section-title {
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: -0.7px;
+  padding-bottom: 20px;
+  /* 공통클래스로 빼둔 부분이니까 나중에 브랜치 합칠 때 지우면 됨 */
+}

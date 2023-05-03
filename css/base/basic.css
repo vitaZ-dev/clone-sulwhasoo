@@ -48,7 +48,10 @@ button {
   width: 100%;
   clear: both;
 }
-
+.wrap > section {
+  margin-top: 120px;
+  padding: 0 24px;
+}
 /* 공통클래스 - swiper */
 .sw-btn {
   position: absolute;
