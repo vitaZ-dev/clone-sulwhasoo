@@ -59,7 +59,6 @@
 }
 
 .carousel .pagination-container {
-  /* flex 둘지는 보류 */
   display: flex;
   align-items: center;
   max-width: 1440px;
@@ -88,4 +87,9 @@
 }
 .carousel .pagination-container .swiper-pagination-progressbar-fill {
   background: #fff;
+}
+@media screen and (max-width: 1660px) {
+  .carousel .pagination-container {
+    padding-left: 130px;
+  }
 }
