@@ -46,6 +46,9 @@
   font-size: 15px;
 }
 
+.select-language {
+  position: relative;
+}
 .language-toggle::after {
   content: "";
   display: inline-block;
@@ -56,6 +59,37 @@
   transform: translateY(-25%);
   background: url("../../images/hd_arrow_white.png") no-repeat center;
   background-size: contain;
+}
+.language-list {
+  /* display: none; */
+
+  position: absolute;
+  background: #fff;
+  top: 36px;
+  left: 0;
+  z-index: 1000;
+  margin-top: -10px;
+  padding: 12px 0;
+  border: 1px solid #191919;
+  font-size: 13px;
+  text-align: left;
+  line-height: 1.5;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+}
+.language-list a {
+  position: relative;
+  display: block;
+  padding: 6px 21px 4px 18px;
+  text-transform: uppercase;
+  color: #000;
+}
+.language-list li:hover {
+  background: #eee;
+}
+/* js로 처리 */
+.language-list li.selected-language {
+  background: #eee;
 }
 
 .top-link > a {
