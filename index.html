@@ -238,6 +238,8 @@
           <!-- swiper pagination -->
           <div class="pagination-container">
             <div class="swiper-pagination"></div>
+            <!-- swiper control-btn -->
+            <button class="slide-control">진행중</button>
           </div>
           <script>
             var swipers = new Swiper(".sw-carousel", {
@@ -257,6 +259,19 @@
                 el: ".carousel .swiper-pagination",
                 type: "progressbar",
               },
+            });
+            let stop = document.querySelector(".slide-control");
+            let box = document.querySelector(".sw-carousel");
+            //해결
+            stop.addEventListener("click", () => {
+              box.classList.toggle("slides--stop");
+              if (box.classList.contains("slides--stop")) {
+                swipers.autoplay.stop();
+                stop.innerText = "가자";
+              } else {
+                swipers.autoplay.start();
+                stop.innerText = "멈춰";
+              }
             });
           </script>
         </div>
