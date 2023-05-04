@@ -10,7 +10,7 @@
   font-size: 15px;
   color: #fff;
 
-  transition: all 0.5s;
+  transition: all 0.7s;
 }
 .header .inner {
   max-width: 1110px;
@@ -113,9 +113,11 @@
   width: 1px;
   height: 15px;
   background: #c9c9c9;
+  margin-top: 3px;
 }
 .top-link > a:last-child {
   padding-right: 0;
+  padding-top: 3px;
 }
 .top-link > a:last-child::after {
   content: "";
@@ -140,6 +142,7 @@
 }
 .gnb-list > li {
   padding: 0 14px;
+  padding-top: 8px;
   margin: 0 10px;
   height: 100%;
 }
@@ -149,6 +152,7 @@
   align-items: center;
   height: 100%;
   font-size: 17px;
+  letter-spacing: -0.425px;
 }
 .gnb-list > li > a:hover {
   top: 1px;
