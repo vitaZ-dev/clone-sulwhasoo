@@ -20,6 +20,17 @@
 .recommend .sw-prev {
   transform: translateY(-100%) rotate(180deg);
 }
+
+.sw-recommend .swiper-slide {
+  width: calc(100% / 3);
+  height: auto;
+}
+.sw-recommend .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .goods-info {
   margin-top: 23px;
   line-height: 1.5;
