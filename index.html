@@ -134,7 +134,7 @@
             <ul class="gnb-list">
               <li>
                 <a href="#">브랜드 빌리프</a>
-                <ul>
+                <ul class="gnb-sub-list">
                   <li>1</li>
                   <li>2</li>
                   <li>3</li>
@@ -158,6 +158,7 @@
             </ul>
           </nav>
         </div>
+        <div class="gnb-sub-list-bg"></div>
         <div class="header-top-search">
           <form>
             <div class="search-box">
@@ -174,6 +175,30 @@
           </div>
         </div>
         <script>
+          // nav 보이기
+          let gnbBg = document.querySelector(".gnb-sub-list-bg");
+          let gnbList = document.querySelector(".gnb-list");
+          let gnbItems = document.querySelectorAll(".gnb-list > li > a");
+          gnbItems.forEach((item) => {
+            item.addEventListener("mouseenter", () => {
+              // gnbBg.style.display = "block";
+              gnbBg.setAttribute("style", "display: block;");
+            });
+          });
+          gnbItems.forEach((item) => {
+            item.addEventListener("mouseleave", () => {
+              // gnbBg.style.display = "none";
+              gnbBg.setAttribute("style", "display: none;");
+            });
+          });
+          //mouseover-mouseout
+          /*
+					const boxes = document.querySelectorAll('.box');
+boxes.forEach( (box) => {
+  box.addEventListener('click', onClickBox)
+});
+					*/
+          // 검색 영역
           let topSearchBtn = document.querySelector(".search-btn");
           let searchCloseBtn = document.querySelector(".search-close");
           let searchArea = document.querySelector(".header-top-search");

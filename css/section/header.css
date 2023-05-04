@@ -156,7 +156,7 @@
 }
 .gnb-list > li > a:hover {
   top: 1px;
-  border-bottom: 2px solid #000;
+  border-bottom: 3px solid #000;
 }
 /* 여긴 보류 */
 .gnb-list > li > ul {
@@ -168,6 +168,25 @@
 .gnb-list > li > a:hover ul {
   display: flex;
   opacity: 1;
+}
+.gnb-list > li > a:hover .gnb-sub-list {
+  border: 5px solid red;
+}
+/* .gnb-sub-list {
+  position: absolute;
+  width: 100vw;
+  height: 20px;
+  background: #fff;
+} */
+.gnb-sub-list-bg {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 34px;
+  background: #fff;
+}
+.is--active {
+	display: block;
 }
 /* //여긴 보류 */
 
