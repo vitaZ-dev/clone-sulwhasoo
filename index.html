@@ -168,8 +168,22 @@
               <button class="submit-btn">검색</button>
             </div>
           </form>
+          <div class="search-close">
+            <a href="#" class="search-close-btn">닫기</a>
+          </div>
         </div>
       </header>
+      <script>
+        let topSearchBtn = document.querySelector(".search-btn");
+        let searchCloseBtn = document.querySelector(".search-close");
+        let searchArea = document.querySelector(".header-top-search");
+        topSearchBtn.addEventListener("click", () => {
+          searchArea.style.display = "block";
+        });
+        searchCloseBtn.addEventListener("click", () => {
+          searchArea.style.display = "none";
+        });
+      </script>
 
       <!-- 캐러셀 슬라이드 -->
       <section class="carousel">
