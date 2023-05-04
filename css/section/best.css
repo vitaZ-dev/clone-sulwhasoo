@@ -1,0 +1,45 @@
+.best-seller-link {
+  position: relative;
+  display: block;
+  height: 540px;
+}
+.bestseller-info {
+  position: absolute;
+  bottom: 88px;
+  left: 168px;
+  z-index: 999;
+}
+
+.bestseller-title {
+  margin: 0;
+  padding: 0;
+
+  color: #222;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.bestseller-desc {
+  padding-top: 7px;
+  line-height: 1.5;
+  color: #666;
+  font-size: 18px;
+}
+
+.bestseller-bt {
+  width: 114px;
+  height: 39px;
+  line-height: 37px;
+  padding: 0 20px;
+  border: 1px solid #222;
+
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 30px;
+  box-sizing: border-box;
+  background: transparent;
+  white-space: nowrap;
+  font-weight: 400;
+  font-family: "Theinhardt", "Noto Sans KR", sans-serif;
+  letter-spacing: -0.35px;
+}
