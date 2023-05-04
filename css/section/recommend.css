@@ -1,12 +1,3 @@
-.recommend .section-title {
-  font-weight: 700;
-  font-size: 28px;
-  letter-spacing: -0.7px;
-  padding-bottom: 20px;
-  line-height: 1.5;
-  /* 공통클래스로 빼둔 부분이니까 나중에 브랜치 합칠 때 지우면 됨 
-	    근데 line-height는 다시 줘야될듯 */
-}
 .recommend .section-slide {
   position: relative;
 }
@@ -15,10 +6,10 @@
   width: 68px;
   height: 68px;
   background-image: url("/images/carousel_btn.png");
-  transform: translateY(-100%);
+  transform: translateY(-125%);
 }
 .recommend .sw-prev {
-  transform: translateY(-100%) rotate(180deg);
+  transform: translateY(-125%) rotate(180deg);
 }
 
 .sw-recommend .swiper-slide {
@@ -47,7 +38,7 @@
   color: #888;
   padding: 2px 0 14px;
 }
-.good-info-price {
+.goods-info-price {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.4px;
