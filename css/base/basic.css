@@ -58,6 +58,11 @@ button {
     padding: 0 20px;
   }
 }
+@media (max-width: 720px) {
+  .wrap > section {
+    margin-top: 35px;
+  }
+}
 .section-title {
   font-weight: 700;
   font-size: 28px;
@@ -67,6 +72,13 @@ button {
   .section-title {
     font-size: 20px;
     margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .section-title {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 24px;
   }
 }
 

@@ -475,8 +475,8 @@ boxes.forEach( (box) => {
           <!-- Initialize Swiper -->
           <script>
             var swiper = new Swiper(".sw-recommend", {
-              slidesPerView: 3,
-              slidesPerGroup: 3, // 한번에 슬라이드할 아이템 개수
+              slidesPerView: 1,
+              slidesPerGroup: 1, // 한번에 슬라이드할 아이템 개수
               spaceBetween: 24,
               speed: 1000, //1s
               loop: true,
@@ -492,6 +492,13 @@ boxes.forEach( (box) => {
               pagination: {
                 el: ".recommend .swiper-pagination",
                 type: "progressbar",
+              },
+              //반응형
+              breakpoints: {
+                720: {
+                  slidesPerView: 3,
+                  slidesPerGroup: 3,
+                },
               },
             });
             // stop & play 버튼
