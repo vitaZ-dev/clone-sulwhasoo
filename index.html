@@ -91,16 +91,380 @@
   <body>
     <div class="wrap">
       <!-- 헤더 -->
-      <header class="header"></header>
+      <header class="header">
+        <div class="inner">
+          <div class="logo">
+            <h1>
+              <a href="#" class="logo-title"></a>
+            </h1>
+          </div>
+          <div class="header-top">
+            <div class="select-language">
+              <a href="#" class="language-toggle">한국/한국어</a>
+              <ul class="language-list">
+                <li class="selected-language"><a href="#">한국/한국어</a></li>
+                <li><a href="#">International/English</a></li>
+                <li><a href="#">中国大陆/中文</a></li>
+                <li><a href="#">中國香港/繁體中文</a></li>
+                <li><a href="#">Singapore/English</a></li>
+                <li><a href="#">Malaysia/English</a></li>
+                <li><a href="#">Việt Nam/Tiếng Việt</a></li>
+                <li><a href="#">Indonesia/Bahasa Indonesia</a></li>
+                <li><a href="#">ประเทศไทย/ไทย</a></li>
+                <li><a href="#">USA/English</a></li>
+              </ul>
+              <script>
+                let langBtn = document.querySelector(".language-toggle");
+                let langBtn_con = document.querySelector(".select-language");
+                langBtn.addEventListener("click", () => {
+                  langBtn.classList.toggle("language-selected");
+                  langBtn_con.classList.toggle("language-selected-active");
+                });
+              </script>
+            </div>
+            <div class="top-link clearfix">
+              <a href="#" class="find-store-link">매장찾기</a>
+              <a href="#" class="purchase-link">구매하기</a>
+              <a href="#" class="search-btn">
+                <i class="icon-search"></i>
+              </a>
+            </div>
+          </div>
+          <nav class="gnb">
+            <ul class="gnb-list">
+              <li>
+                <a href="#">브랜드 빌리프</a>
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">베스트셀러</a>
+              </li>
+              <li>
+                <a href="#">제품</a>
+              </li>
+              <li>
+                <a href="#">설화수 포스트</a>
+              </li>
+              <li>
+                <a href="#">스파</a>
+              </li>
+              <li>
+                <a href="#">플래그십 스토어</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-top-search">
+          <form>
+            <div class="search-box">
+              <input
+                type="search"
+                class="search-word"
+                placeholder="검색어를 입력해주세요"
+              />
+              <button class="submit-btn">검색</button>
+            </div>
+          </form>
+          <div class="search-close">
+            <a href="#" class="search-close-btn">닫기</a>
+          </div>
+        </div>
+      </header>
+      <script>
+        let topSearchBtn = document.querySelector(".search-btn");
+        let searchCloseBtn = document.querySelector(".search-close");
+        let searchArea = document.querySelector(".header-top-search");
+        topSearchBtn.addEventListener("click", () => {
+          searchArea.style.display = "block";
+        });
+        searchCloseBtn.addEventListener("click", () => {
+          searchArea.style.display = "none";
+        });
+      </script>
 
       <!-- 캐러셀 슬라이드 -->
-      <section class="carousel"></section>
+      <section class="carousel">
+        <div class="wrapper">
+          <button class="sw-btn sw-prev"></button>
+          <button class="sw-btn sw-next"></button>
+          <!-- Carousel Swiper -->
+          <div class="swiper sw-carousel">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#carousel01">
+                  <picture>
+                    <source
+                      srcset="/images/slide01_720.jpg"
+                      media="(max-width: 720px)"
+                    />
+                    <source
+                      srcset="/images/slide01_1024.jpg"
+                      media="(max-width: 1024px)"
+                    />
+                    <img src="/images/slide01.jpg" alt="slide01" />
+                  </picture>
+                  <div class="slide-info">
+                    <div class="inner">
+                      <p>NEW BRAND FILM</p>
+                      <p>인삼, 아름다움 그리고 설화수</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#carousel02">
+                  <picture>
+                    <source
+                      srcset="/images/slide02_720.jpg"
+                      media="(max-width: 720px)"
+                    />
+                    <source
+                      srcset="/images/slide02_1024.jpg"
+                      media="(max-width: 1024px)"
+                    />
+                    <img src="/images/slide02.jpg" alt="slide02" />
+                  </picture>
+                  <div class="slide-info">
+                    <div class="inner">
+                      <p>SULWHASOO FIRST CARE ACTIVATING SERUM VI</p>
+                      <p>윤조에센스 6세대</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#carousel03">
+                  <picture>
+                    <source
+                      srcset="/images/slide03_720.jpg"
+                      media="(max-width: 720px)"
+                    />
+                    <source
+                      srcset="/images/slide03_1024.jpg"
+                      media="(max-width: 1024px)"
+                    />
+                    <img src="/images/slide03.jpg" alt="slide03" />
+                  </picture>
+                  <div class="slide-info">
+                    <div class="inner">
+                      <p>Global Ambassador</p>
+                      <p>설화수, 그리고 ROSÉ</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#carousel04">
+                  <picture>
+                    <source
+                      srcset="/images/slide04_720.jpg"
+                      media="(max-width: 720px)"
+                    />
+                    <source
+                      srcset="/images/slide04_1024.jpg"
+                      media="(max-width: 1024px)"
+                    />
+                    <img src="/images/slide04.jpg" alt="slide04" />
+                  </picture>
+                  <div class="slide-info">
+                    <div class="inner">
+                      <p>Amore mall (4.24-5.7)</p>
+                      <p>감사의 마음을 담아요</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- swiper pagination -->
+          <div class="pagination-container">
+            <div class="swiper-pagination"></div>
+            <!-- swiper control-btn -->
+            <button class="slide-control"></button>
+          </div>
+          <script>
+            var swipers = new Swiper(".sw-carousel", {
+              // fade 기능 구현
+              effect: "fade",
+              spaceBetween: 24,
+              slidesPerView: 1,
+              speed: 1000, //1s
+              loop: true,
+              autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+              },
+              navigation: {
+                nextEl: ".carousel .sw-next",
+                prevEl: ".carousel .sw-prev",
+              },
+              //progress bar ~> 너비랑 색깔만 다시주면 됨+위치도
+              pagination: {
+                el: ".carousel .swiper-pagination",
+                type: "progressbar",
+              },
+            });
+            let stop = document.querySelector(".slide-control");
+            let box = document.querySelector(".sw-carousel");
+            //해결
+            stop.addEventListener("click", () => {
+              box.classList.toggle("slides--stop");
+              if (box.classList.contains("slides--stop")) {
+                swipers.autoplay.stop();
+                stop.style.backgroundImage = `url("../../images/carousel_play.png")`;
+              } else {
+                swipers.autoplay.start();
+                stop.style.backgroundImage = `url("../../images/carousel_stop.png")`;
+              }
+            });
+          </script>
+        </div>
+      </section>
 
       <!-- 설화수 추천 -->
-      <section class="recommend"></section>
+      <section class="recommend">
+        <div class="inner">
+          <h2 class="section-title">설화수 추천</h2>
+          <div class="section-slide">
+            <button class="sw-btn sw-prev"></button>
+            <button class="sw-btn sw-next"></button>
+            <!-- recommend Swiper -->
+            <div class="swiper sw-recommend">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#recommend01">
+                    <div class="goods-img">
+                      <img src="./images/recommend01.jpg" alt="recommend01" />
+                    </div>
+                    <div class="goods-info">
+                      <p class="goods-info-title">윤조에센스 6세대</p>
+                      <p class="goods-info-desc">
+                        First Care Activating Serum VI
+                      </p>
+                      <p class="goods-info-price">140,000원</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#recommend02">
+                    <div class="goods-img">
+                      <img src="./images/recommend02.jpg" alt="recommend02" />
+                    </div>
+                    <div class="goods-info">
+                      <p class="goods-info-title">자음생크림</p>
+                      <p class="goods-info-desc">
+                        Concentrated Ginseng Renewing Cream EX
+                      </p>
+                      <p class="goods-info-price">270,000원</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#recommend03">
+                    <div class="goods-img">
+                      <img src="./images/recommend03.jpg" alt="recommend03" />
+                    </div>
+                    <div class="goods-info">
+                      <p class="goods-info-title">자음생세럼</p>
+                      <p class="goods-info-desc">
+                        Concentrated Ginseng Renewing Serum EX
+                      </p>
+                      <p class="goods-info-price">220,000원</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#recommend04">
+                    <div class="goods-img">
+                      <img src="./images/recommend04.jpg" alt="recommend04" />
+                    </div>
+                    <div class="goods-info">
+                      <p class="goods-info-title">순행클렌징오일</p>
+                      <p class="goods-info-desc">Gentle Cleansing Oil</p>
+                      <p class="goods-info-price">47,000원</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#recommend05">
+                    <div class="goods-img">
+                      <img src="./images/recommend05.jpg" alt="recommend05" />
+                    </div>
+                    <div class="goods-info">
+                      <p class="goods-info-title">순행클렌징폼</p>
+                      <p class="goods-info-desc">Gentle Cleansing Foam</p>
+                      <p class="goods-info-price">42,000원</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#recommend06">
+                    <div class="goods-img">
+                      <img src="./images/recommend06.jpg" alt="recommend06" />
+                    </div>
+                    <div class="goods-info">
+                      <p class="goods-info-title">백삼팩</p>
+                      <p class="goods-info-desc">
+                        White Ginseng Radiance Refining Mask
+                      </p>
+                      <p class="goods-info-price">72,000원</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- progress bar -->
+          <div class="pagination-wrapper">
+            <div class="swiper-pagination"></div>
+            <!-- swiper control-btn -->
+            <button class="sw-stop"></button>
+          </div>
+          <!-- Initialize Swiper -->
+          <script>
+            var swiper = new Swiper(".sw-recommend", {
+              slidesPerView: 3,
+              slidesPerGroup: 3, // 한번에 슬라이드할 아이템 개수
+              spaceBetween: 24,
+              speed: 1000, //1s
+              loop: true,
+              autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+              },
+              navigation: {
+                nextEl: ".recommend .sw-next",
+                prevEl: ".recommend .sw-prev",
+              },
+              //progress bar
+              pagination: {
+                el: ".recommend .swiper-pagination",
+                type: "progressbar",
+              },
+            });
+            // stop & play 버튼
+            let stopBtn = document.querySelector(".sw-stop");
+            let container = document.querySelector(".sw-recommend");
+            stopBtn.addEventListener("click", () => {
+              container.classList.toggle("slide--stop");
+              if (container.classList.contains("slide--stop")) {
+                swiper.autoplay.stop();
+                stopBtn.style.backgroundImage = `url("../../images/play.png")`;
+              } else {
+                swiper.autoplay.start();
+                stopBtn.style.backgroundImage = `url("../../images/stop.png")`;
+              }
+            });
+          </script>
+        </div>
+      </section>
 
       <!-- 베스트 셀러 -->
-      <section class="best-seller">
+      <!-- <section class="best-seller">
         <div class="inner">
           <a href="#" class="best-seller-link">
             <img src="images/best_seller1.jpg" alt="베스트셀러"/>
@@ -112,7 +476,7 @@
             </div>
           </a>
         </div>
-      </section>
+      </section> -->
 
       <!-- 설화수 시즌추천 -->
       <section class="season">
