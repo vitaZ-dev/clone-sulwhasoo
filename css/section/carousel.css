@@ -11,8 +11,6 @@
   height: auto;
 }
 .carousel .sw-btn {
-  width: 68px;
-  height: 68px;
   background-image: url("/images/carousel_btn.png");
 }
 .carousel .swiper-slide a {
@@ -93,5 +91,6 @@
 @media screen and (max-width: 1660px) {
   .carousel .pagination-container {
     padding-left: 130px;
+    margin-bottom: 4.6%;
   }
 }

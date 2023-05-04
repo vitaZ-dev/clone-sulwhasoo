@@ -3,8 +3,6 @@
 }
 
 .recommend .sw-btn {
-  width: 68px;
-  height: 68px;
   background-image: url("/images/carousel_btn.png");
   transform: translateY(-125%);
 }
