@@ -91,6 +91,17 @@
   <body>
     <div class="wrap">
       <!-- 헤더 -->
+      <div
+        class="modal"
+        style="
+          display: none;
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(0, 0, 0, 0.3);
+          z-index: 999999;
+        "
+      ></div>
       <header class="header">
         <div class="inner">
           <div class="logo">
@@ -201,14 +212,21 @@ boxes.forEach( (box) => {
 });
 					*/
           // 검색 영역
+          let modalWrap = document.querySelector(".modal");
           let topSearchBtn = document.querySelector(".search-btn");
           let searchCloseBtn = document.querySelector(".search-close");
           let searchArea = document.querySelector(".header-top-search");
           topSearchBtn.addEventListener("click", () => {
             searchArea.style.display = "block";
+            modalWrap.style.display = "block";
+            //스크롤 금지
+            document.body.style.overflow = "hidden";
           });
           searchCloseBtn.addEventListener("click", () => {
             searchArea.style.display = "none";
+            modalWrap.style.display = "none";
+            // 다시 스크롤
+            document.body.style.overflow = "unset";
           });
         </script>
       </header>
