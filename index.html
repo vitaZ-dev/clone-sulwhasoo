@@ -134,11 +134,13 @@
             <ul class="gnb-list">
               <li>
                 <a href="#">브랜드 빌리프</a>
-                <ul class="gnb-sub-list">
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                </ul>
+                <div class="gnb-sub-list" style="display: none">
+                  <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                  </ul>
+                </div>
               </li>
               <li>
                 <a href="#">베스트셀러</a>
@@ -176,21 +178,21 @@
         </div>
         <script>
           // nav 보이기
-          let gnbBg = document.querySelector(".gnb-sub-list-bg");
-          let gnbList = document.querySelector(".gnb-list");
-          let gnbItems = document.querySelectorAll(".gnb-list > li > a");
-          gnbItems.forEach((item) => {
-            item.addEventListener("mouseenter", () => {
-              // gnbBg.style.display = "block";
-              gnbBg.setAttribute("style", "display: block;");
-            });
-          });
-          gnbItems.forEach((item) => {
-            item.addEventListener("mouseleave", () => {
-              // gnbBg.style.display = "none";
-              gnbBg.setAttribute("style", "display: none;");
-            });
-          });
+          // let gnbBg = document.querySelector(".gnb-sub-list-bg");
+          // let gnbList = document.querySelector(".gnb-list");
+          // let gnbItems = document.querySelectorAll(".gnb-list > li > a");
+          // gnbItems.forEach((item) => {
+          //   item.addEventListener("mouseenter", () => {
+          //     // gnbBg.style.display = "block";
+          //     gnbBg.setAttribute("style", "display: block;");
+          //   });
+          // });
+          // gnbItems.forEach((item) => {
+          //   item.addEventListener("mouseleave", () => {
+          //     // gnbBg.style.display = "none";
+          //     gnbBg.setAttribute("style", "display: none;");
+          //   });
+          // });
           //mouseover-mouseout
           /*
 					const boxes = document.querySelectorAll('.box');

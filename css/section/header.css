@@ -159,25 +159,29 @@
   border-bottom: 3px solid #000;
 }
 /* 여긴 보류 */
-.gnb-list > li > ul {
+.gnb-list > li > .gnb-sub-list {
   display: flex;
   height: 34px;
   background-color: #00f;
-  opacity: 0;
+  /* opacity: 0; */
+  position: absolute;
+  top: 126px;
+  left: 0;
+  width: 100vw;
+  height: 34px;
+  background: #fff;
 }
-.gnb-list > li > a:hover ul {
+.gnb-list > li > .gnb-sub-list {
+  display: flex;
+  justify-content: center;
+}
+/* .gnb-list > li > a:hover ul {
   display: flex;
   opacity: 1;
-}
+} */
 .gnb-list > li > a:hover .gnb-sub-list {
   border: 5px solid red;
 }
-/* .gnb-sub-list {
-  position: absolute;
-  width: 100vw;
-  height: 20px;
-  background: #fff;
-} */
 .gnb-sub-list-bg {
   display: none;
   position: absolute;
@@ -186,7 +190,7 @@
   background: #fff;
 }
 .is--active {
-	display: block;
+  display: block;
 }
 /* //여긴 보류 */
 
