@@ -57,6 +57,18 @@
   font-weight: 700;
   letter-spacing: -0.9px;
 }
+@media screen and (max-width: 1024px) {
+  .slide-info .inner {
+    padding-left: 7.2%;
+    padding-bottom: 9.5%;
+  }
+  .slide-info p:first-child {
+    font-size: 14px;
+  }
+  .slide-info p:last-child {
+    font-size: 28px;
+  }
+}
 
 .carousel .pagination-container {
   display: flex;
@@ -92,5 +104,19 @@
   .carousel .pagination-container {
     padding-left: 130px;
     margin-bottom: 4.6%;
+  }
+}
+@media screen and (max-width: 1660px) {
+  .carousel .pagination-container {
+    padding-left: 7.2%;
+    margin-bottom: 5.4%;
+  }
+  .carousel .pagination-container .swiper-pagination {
+    width: 300px;
+    height: 3px;
+  }
+  .carousel .pagination-container .slide-control {
+    width: 6px;
+    height: 8px;
   }
 }
