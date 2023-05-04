@@ -329,7 +329,33 @@ input[type="search"]::-webkit-search-cancel-button {
   background-size: contain;
   transform: rotate(180deg);
 }
-
+@media screen and (max-width: 1024px) {
+  .header-top-search {
+    height: 90px;
+    top: 60px;
+    border-top: 1px solid #eee;
+    padding: 0;
+    padding-top: 10px;
+  }
+  .search-close {
+    margin-top: 8px;
+    padding-bottom: 8px;
+  }
+  .search-word {
+    width: calc(100% - 100px);
+    height: 42px;
+    border-bottom-width: 1px;
+    padding: 0 10px;
+    font-size: 16px;
+    background-color: #faf9f5;
+    background-image: none;
+  }
+  .submit-btn {
+    height: 42px;
+    width: 70px;
+    font-size: 14px;
+  }
+}
 .header:hover {
   background: #fff;
   color: #000;
