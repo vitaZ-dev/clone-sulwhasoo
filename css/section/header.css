@@ -376,19 +376,23 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* 1024px 이하에서 보이는 sidenav */
 section.sidenav {
+  display: none;
+
   position: absolute;
   top: 0;
   margin: 0;
   padding: 0;
   z-index: 999999;
   width: 100%;
-  height: 600px;
+  height: 100%;
 
-  background: whitesmoke;
+  background: #333;
 }
 .sidenav-wrap {
   display: block;
   z-index: 999999;
+  overflow: auto;
+  height: fit-content; /**/
 }
 .sidenav-header {
   position: fixed;
@@ -422,7 +426,7 @@ section.sidenav {
 }
 
 .sidenav-gnb {
-  margin-top: 61px;
+  margin-top: 60px;
   padding: 16px 0;
   background: #fff;
 }

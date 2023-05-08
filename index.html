@@ -235,13 +235,13 @@ boxes.forEach( (box) => {
       </header>
       <!-- header-sidenav -->
       <section class="sidenav">
-        <div class="sidenav-wrap">
-          <div class="sidenav-header clearfix">
-            <div class="side-logo">
-              <a href="#logo"></a>
-            </div>
-            <button class="sidenav-close"></button>
+        <div class="sidenav-header clearfix">
+          <div class="side-logo">
+            <a href="#logo"></a>
           </div>
+          <button class="sidenav-close"></button>
+        </div>
+        <div class="sidenav-wrap">
           <nav class="sidenav-gnb">
             <ul class="sidenav-gnb-list">
               <li>
@@ -361,6 +361,43 @@ boxes.forEach( (box) => {
           </div>
         </div>
       </section>
+      <script>
+        let sideNavBtn = document.querySelector(".side-nav-btn");
+        let sideNavClose = document.querySelector(".sidenav-close");
+        let sideNavArea = document.querySelector("section.sidenav");
+        let sideNavWrap = document.querySelector(".sidenav-wrap");
+        sideNavBtn.addEventListener("click", function () {
+          sideNavArea.style.display = "block";
+          //스크롤 금지
+          // document.body.style.overflow = "hidden";
+        });
+        sideNavClose.addEventListener("click", function () {
+          sideNavArea.style.display = "none";
+          // 다시 스크롤
+          // document.body.style.overflow = "unset";
+        });
+
+        let sideNavGnbSubList = document.querySelectorAll(
+          ".sidenav-gnb-sub-list"
+        );
+        // const onClickBox = (e) => {
+        //   // e.style.display = "block";
+        //   console.log(e.target);
+        //   let subList = e.querySelector(".sidenav-gnb-sub-list");
+        //   e.style.display = "block";
+        // };
+
+        // const lis = document.querySelectorAll(".sidenav-gnb-list > li");
+        // console.log(lis);
+        // lis.forEach((box) => {
+        //   box.addEventListener("click", onClickBox);
+        // });
+        // const boxes = document.querySelectorAll(".sidenav-gnb-sub-list");
+        // boxes.forEach((box) => {
+        //   box.addEventListener("click", onClickBox);
+        // });
+      </script>
+
       <!-- 캐러셀 슬라이드 -->
       <section class="carousel">
         <div class="wrapper">
