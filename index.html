@@ -127,14 +127,6 @@
                 <li><a href="#">ประเทศไทย/ไทย</a></li>
                 <li><a href="#">USA/English</a></li>
               </ul>
-              <script>
-                let langBtn = document.querySelector(".language-toggle");
-                let langBtn_con = document.querySelector(".select-language");
-                langBtn.addEventListener("click", () => {
-                  langBtn.classList.toggle("language-selected");
-                  langBtn_con.classList.toggle("language-selected-active");
-                });
-              </script>
             </div>
             <div class="top-link clearfix">
               <a href="#" class="find-store-link">매장찾기</a>
@@ -252,56 +244,6 @@
             <a href="#" class="search-close-btn">닫기</a>
           </div>
         </div>
-        <script>
-          // nav 보이기
-          let gnbWrap = document.querySelector(".gnb");
-          let gnbBg = document.querySelector(".gnb-sub-list-bg");
-          let gnbList = document.querySelector(".gnb-list");
-          let gnbItems = document.querySelectorAll(".gnb-list > li");
-          gnbItems.forEach((item) => {
-            item.addEventListener("mouseenter", () => {
-              console.log(item);
-              // gnbItems[1]
-              // gnbBg.style.display = "block";
-              gnbWrap.setAttribute(
-                "style",
-                "border-bottom: 1px solid #d5d5d5;"
-              );
-              gnbBg.setAttribute("style", "display: block;");
-            });
-          });
-          gnbItems.forEach((item) => {
-            item.addEventListener("mouseleave", () => {
-              // gnbBg.style.display = "none";
-              gnbWrap.setAttribute("style", "border-bottom: none;");
-              gnbBg.setAttribute("style", "display: none;");
-            });
-          });
-          //mouseover-mouseout
-          /*
-					const boxes = document.querySelectorAll('.box');
-boxes.forEach( (box) => {
-  box.addEventListener('click', onClickBox)
-});
-					*/
-          // 검색 영역
-          let modalWrap = document.querySelector(".modal");
-          let topSearchBtn = document.querySelector(".search-btn");
-          let searchCloseBtn = document.querySelector(".search-close-btn");
-          let searchArea = document.querySelector(".header-top-search");
-          topSearchBtn.addEventListener("click", () => {
-            searchArea.style.display = "block";
-            modalWrap.style.display = "block";
-            //스크롤 금지
-            document.body.style.overflow = "hidden";
-          });
-          searchCloseBtn.addEventListener("click", () => {
-            searchArea.style.display = "none";
-            modalWrap.style.display = "none";
-            // 다시 스크롤
-            document.body.style.overflow = "unset";
-          });
-        </script>
       </header>
       <!-- header-sidenav -->
       <section class="sidenav">
@@ -431,42 +373,6 @@ boxes.forEach( (box) => {
           </div>
         </div>
       </section>
-      <script>
-        let sideNavBtn = document.querySelector(".side-nav-btn");
-        let sideNavClose = document.querySelector(".sidenav-close");
-        let sideNavArea = document.querySelector("section.sidenav");
-        let sideNavWrap = document.querySelector(".sidenav-wrap");
-        sideNavBtn.addEventListener("click", function () {
-          sideNavArea.style.display = "block";
-          //스크롤 금지
-          // document.body.style.overflow = "hidden";
-        });
-        sideNavClose.addEventListener("click", function () {
-          sideNavArea.style.display = "none";
-          // 다시 스크롤
-          // document.body.style.overflow = "unset";
-        });
-
-        let sideNavGnbSubList = document.querySelectorAll(
-          ".sidenav-gnb-sub-list"
-        );
-        // const onClickBox = (e) => {
-        //   // e.style.display = "block";
-        //   console.log(e.target);
-        //   let subList = e.querySelector(".sidenav-gnb-sub-list");
-        //   e.style.display = "block";
-        // };
-
-        // const lis = document.querySelectorAll(".sidenav-gnb-list > li");
-        // console.log(lis);
-        // lis.forEach((box) => {
-        //   box.addEventListener("click", onClickBox);
-        // });
-        // const boxes = document.querySelectorAll(".sidenav-gnb-sub-list");
-        // boxes.forEach((box) => {
-        //   box.addEventListener("click", onClickBox);
-        // });
-      </script>
 
       <!-- 캐러셀 슬라이드 -->
       <section class="carousel">
@@ -568,42 +474,6 @@ boxes.forEach( (box) => {
             <!-- swiper control-btn -->
             <button class="slide-control"></button>
           </div>
-          <script>
-            var swipers = new Swiper(".sw-carousel", {
-              // fade 기능 구현
-              effect: "fade",
-              spaceBetween: 24,
-              slidesPerView: 1,
-              speed: 1000, //1s
-              loop: true,
-              autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-              },
-              navigation: {
-                nextEl: ".carousel .sw-next",
-                prevEl: ".carousel .sw-prev",
-              },
-              //progress bar ~> 너비랑 색깔만 다시주면 됨+위치도
-              pagination: {
-                el: ".carousel .swiper-pagination",
-                type: "progressbar",
-              },
-            });
-            let stop = document.querySelector(".slide-control");
-            let box = document.querySelector(".sw-carousel");
-            //해결
-            stop.addEventListener("click", () => {
-              box.classList.toggle("slides--stop");
-              if (box.classList.contains("slides--stop")) {
-                swipers.autoplay.stop();
-                stop.style.backgroundImage = `url("../../images/carousel_play.png")`;
-              } else {
-                swipers.autoplay.start();
-                stop.style.backgroundImage = `url("../../images/carousel_stop.png")`;
-              }
-            });
-          </script>
         </div>
       </section>
 
@@ -706,49 +576,6 @@ boxes.forEach( (box) => {
             <!-- swiper control-btn -->
             <button class="sw-stop"></button>
           </div>
-          <!-- Initialize Swiper -->
-          <script>
-            var swiper = new Swiper(".sw-recommend", {
-              slidesPerView: 1,
-              slidesPerGroup: 1, // 한번에 슬라이드할 아이템 개수
-              spaceBetween: 24,
-              speed: 1000, //1s
-              loop: true,
-              autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-              },
-              navigation: {
-                nextEl: ".recommend .sw-next",
-                prevEl: ".recommend .sw-prev",
-              },
-              //progress bar
-              pagination: {
-                el: ".recommend .swiper-pagination",
-                type: "progressbar",
-              },
-              //반응형
-              breakpoints: {
-                720: {
-                  slidesPerView: 3,
-                  slidesPerGroup: 3,
-                },
-              },
-            });
-            // stop & play 버튼
-            let stopBtn = document.querySelector(".sw-stop");
-            let container = document.querySelector(".sw-recommend");
-            stopBtn.addEventListener("click", () => {
-              container.classList.toggle("slide--stop");
-              if (container.classList.contains("slide--stop")) {
-                swiper.autoplay.stop();
-                stopBtn.style.backgroundImage = `url("../../images/play.png")`;
-              } else {
-                swiper.autoplay.start();
-                stopBtn.style.backgroundImage = `url("../../images/stop.png")`;
-              }
-            });
-          </script>
         </div>
       </section>
 
@@ -817,5 +644,7 @@ boxes.forEach( (box) => {
       <!-- 하단 -->
       <footer class="footer"></footer>
     </div>
+    <script src="./js/header.js"></script>
+    <script src="./js/swipercontrol.js"></script>
   </body>
 </html>
