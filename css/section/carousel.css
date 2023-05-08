@@ -134,6 +134,9 @@
     padding-left: 130px;
     margin-bottom: 4.6%;
   }
+}
+
+@media screen and (max-width: 1024px) {
   .carousel .pagination-container .swiper-pagination {
     width: 300px;
     height: 3px;
@@ -142,9 +145,6 @@
     width: 6px;
     height: 8px;
   }
-}
-
-@media screen and (max-width: 1024px) {
   .carousel .pagination-container {
     padding-left: 7.2%;
     margin-bottom: 5.4%;
