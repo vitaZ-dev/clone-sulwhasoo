@@ -146,6 +146,7 @@
     position: absolute;
     top: 12px;
     left: 15px;
+    /* left: 20px; */
     width: 33px;
     height: 33px;
     background: none;
@@ -186,6 +187,14 @@
   .search-btn > .icon-search {
     width: 38px;
     height: 23px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .side-nav-btn {
+    left: 20px;
+  }
+  .top-link > .search-btn {
+    right: 15px;
   }
 }
 .gnb-list {
