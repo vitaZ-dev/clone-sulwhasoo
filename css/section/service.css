@@ -1,35 +1,40 @@
-
 .package {
-    float: left;
-    text-align: center;
+  float: left;
+  text-align: center;
 }
 .package-info {
-    display: block;
-    width: 100%;
-    height: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .service-title {
-    font-size: 28px;
-    font-weight: 700;
-    margin-top: 22px;
-    margin-bottom: 14px;
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 22px;
+  margin-bottom: 14px;
 }
 .sercice-btn {
-    padding: 9px 33px;
-    border: 1px solid #000;
-    font-size: 14px;
-    background: transparent;
-    font-weight: 500;
-    font-family: "Theinhardt", "Noto Sans KR", sans-serif;
-    letter-spacing: -0.7px;
+  padding: 9px 33px;
+  border: 1px solid #000;
+  font-size: 14px;
+  background: transparent;
+  font-weight: 500;
+  font-family: "Theinhardt", "Noto Sans KR", sans-serif;
+  letter-spacing: -0.7px;
 }
 
-.store{
-    float: right;
-    text-align: center;
+.store {
+  float: right;
+  text-align: center;
 }
 .store-info {
- display: block;
-    width: 100%;
-    height: 100%; 
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.store-info img {
+  object-fit: cover;
+  width: 708px;
+  height: 600px;
 }
