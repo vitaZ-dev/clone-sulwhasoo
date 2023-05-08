@@ -35,7 +35,7 @@
   display: block;
   width: 166px;
   height: 40px;
-  background: url("/images/logo_white.png") no-repeat center;
+  background: url("../../images/logo_white.png") no-repeat center;
   background-size: contain;
 }
 
@@ -130,7 +130,7 @@
   display: block;
   width: 17px;
   height: 17px;
-  background: url("/images/icon_search_white.png") no-repeat center;
+  background: url("../../images/icon_search_white.png") no-repeat center;
   background-size: contain;
 }
 
@@ -373,10 +373,10 @@ input[type="search"]::-webkit-search-cancel-button {
   color: #000;
 }
 .header:hover .logo-title {
-  background-image: url("/images/logo_orange.png");
+  background-image: url("../../images/logo_orange.png");
 }
 .header:hover .search-btn > .icon-search {
-  background-image: url("/images/icon_search_black.png");
+  background-image: url("../../images/icon_search_black.png");
 }
 .header:hover .language-toggle::after {
   content: "";

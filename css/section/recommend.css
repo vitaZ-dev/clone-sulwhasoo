@@ -3,12 +3,12 @@
 }
 
 .recommend .sw-btn {
-  background-image: url("/images/carousel_btn.png");
+  background-image: url("../../images/carousel_btn.png");
   transform: translateY(-125%);
 }
 @media screen and (max-width: 1024px) {
   .recommend .sw-btn {
-    background-image: url("/images/recommend_btn.png");
+    background-image: url("../../images/recommend_btn.png");
   }
 }
 @media screen and (max-width: 720px) {

@@ -11,7 +11,7 @@
   height: auto;
 }
 .carousel .sw-btn {
-  background-image: url("/images/carousel_btn.png");
+  background-image: url("../../images/carousel_btn.png");
 }
 @media screen and (max-width: 720px) {
   .carousel .sw-btn {
