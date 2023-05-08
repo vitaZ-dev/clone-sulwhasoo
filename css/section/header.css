@@ -424,6 +424,7 @@ section.sidenav {
 .sidenav-gnb {
   margin-top: 61px;
   padding: 16px 0;
+  background: #fff;
 }
 .sidenav-gnb-list > li {
   position: relative;
@@ -459,4 +460,38 @@ section.sidenav {
   width: 16px;
   height: 16px;
   transform: translateY(-100%);
+}
+
+.sidenav-footer {
+  background: #333;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  height: auto;
+}
+.sidenav-link {
+  padding: 12px 20px;
+}
+.sidenav-link > a {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.sidenav-link > a:hover {
+  text-decoration: underline;
+}
+/* 여기 자리 배치는 다시하기 */
+.sidenav-language {
+  width: 100%;
+  padding: 18px 20px;
+  border-top: 1px solid #424242;
+  background: #333;
+  color: #fff;
+  font-weight: 500;
+}
+.sidenav-language span:first-child {
+  float: left;
+}
+.sidenav-language span:last-child {
+  float: right;
 }
