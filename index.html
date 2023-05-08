@@ -148,28 +148,90 @@
             <ul class="gnb-list">
               <li>
                 <a href="#">브랜드 빌리프</a>
-                <div class="gnb-sub-list" style="display: none">
-                  <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                  </ul>
-                </div>
+                <ul class="gnb-sub-list clearfix" id="gnb-belief">
+                  <li>
+                    <a href="#">브랜드 빌리프</a>
+                  </li>
+                  <li>
+                    <a href="#">브랜드 캠페인</a>
+                  </li>
+                  <li>
+                    <a href="#">브랜드 엠배서더</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="#">베스트셀러</a>
+                <ul class="gnb-sub-list clearfix" id="gnb-best">
+                  <li>
+                    <a href="#">베스트셀러</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="#">제품</a>
+                <ul class="gnb-sub-list clearfix" id="gnb-goods">
+                  <li>
+                    <a href="#">스킨케어</a>
+                  </li>
+                  <li>
+                    <a href="#">메이크업</a>
+                  </li>
+                  <li>
+                    <a href="#">남성</a>
+                  </li>
+                  <li>
+                    <a href="#">진설</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="#">설화수 포스트</a>
+                <ul class="gnb-sub-list clearfix" id="gnb-post">
+                  <li>
+                    <a href="#">설화수 포스트</a>
+                  </li>
+                  <li>
+                    <a href="#">명작컬렉션</a>
+                  </li>
+                  <li>
+                    <a href="#">설화수 스타일</a>
+                  </li>
+                  <li>
+                    <a href="#">설화문화전</a>
+                  </li>
+                  <li>
+                    <a href="#">설화매거진</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="#">스파</a>
+                <ul class="gnb-sub-list clearfix" id="gnb-spa">
+                  <li>
+                    <a href="#">소개</a>
+                  </li>
+                  <li>
+                    <a href="#">스파 프로그램</a>
+                  </li>
+                  <li>
+                    <a href="#">예약</a>
+                  </li>
+                  <li>
+                    <a href="#">매장 찾기</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="#">플래그십 스토어</a>
+                <ul class="gnb-sub-list clearfix" id="gnb-store">
+                  <li>
+                    <a href="#">설화수 북촌</a>
+                  </li>
+                  <li>
+                    <a href="#">설화수 도산</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </nav>
@@ -192,21 +254,29 @@
         </div>
         <script>
           // nav 보이기
-          // let gnbBg = document.querySelector(".gnb-sub-list-bg");
-          // let gnbList = document.querySelector(".gnb-list");
-          // let gnbItems = document.querySelectorAll(".gnb-list > li > a");
-          // gnbItems.forEach((item) => {
-          //   item.addEventListener("mouseenter", () => {
-          //     // gnbBg.style.display = "block";
-          //     gnbBg.setAttribute("style", "display: block;");
-          //   });
-          // });
-          // gnbItems.forEach((item) => {
-          //   item.addEventListener("mouseleave", () => {
-          //     // gnbBg.style.display = "none";
-          //     gnbBg.setAttribute("style", "display: none;");
-          //   });
-          // });
+          let gnbWrap = document.querySelector(".gnb");
+          let gnbBg = document.querySelector(".gnb-sub-list-bg");
+          let gnbList = document.querySelector(".gnb-list");
+          let gnbItems = document.querySelectorAll(".gnb-list > li");
+          gnbItems.forEach((item) => {
+            item.addEventListener("mouseenter", () => {
+              console.log(item);
+              // gnbItems[1]
+              // gnbBg.style.display = "block";
+              gnbWrap.setAttribute(
+                "style",
+                "border-bottom: 1px solid #d5d5d5;"
+              );
+              gnbBg.setAttribute("style", "display: block;");
+            });
+          });
+          gnbItems.forEach((item) => {
+            item.addEventListener("mouseleave", () => {
+              // gnbBg.style.display = "none";
+              gnbWrap.setAttribute("style", "border-bottom: none;");
+              gnbBg.setAttribute("style", "display: none;");
+            });
+          });
           //mouseover-mouseout
           /*
 					const boxes = document.querySelectorAll('.box');

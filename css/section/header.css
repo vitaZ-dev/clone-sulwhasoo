@@ -204,9 +204,9 @@
   align-items: center;
 }
 .gnb-list > li {
-  padding: 0 14px;
+  padding: 0 20px;
   padding-top: 8px;
-  margin: 0 10px;
+  margin: 0 4px;
   height: 100%;
 }
 .gnb-list > li > a {
@@ -219,41 +219,65 @@
 }
 .gnb-list > li > a:hover {
   top: 1px;
-  border-bottom: 3px solid #000;
+  border-bottom: 2px solid #000;
 }
-/* 여긴 보류 */
-.gnb-list > li > .gnb-sub-list {
-  display: flex;
-  height: 34px;
-  background-color: #00f;
-  /* opacity: 0; */
+.gnb-sub-list {
   position: absolute;
-  top: 126px;
-  left: 0;
-  width: 100vw;
+  top: 48px;
   height: 34px;
-  background: #fff;
+  color: #555;
+
+  /* hover 시 display: block이 아니라 flex로...왠지 몰겠는데 다른건 안 먹히네 */
+  display: none;
 }
-.gnb-list > li > .gnb-sub-list {
-  display: flex;
-  justify-content: center;
+.gnb-list > li {
+  position: relative;
 }
-/* .gnb-list > li > a:hover ul {
-  display: flex;
-  opacity: 1;
-} */
-.gnb-list > li > a:hover .gnb-sub-list {
-  border: 5px solid red;
+.gnb-sub-list > li {
+  float: left;
+  padding: 6px 0;
+}
+.gnb-sub-list > li > a {
+  padding: 0 15px;
+  width: max-content;
+  display: inline-block;
+  vertical-align: middle;
+}
+.gnb-sub-list > li > a:hover {
+  font-weight: 700;
+}
+.gnb-sub-list > li:first-child > a {
+  padding-left: 0;
 }
 .gnb-sub-list-bg {
   display: none;
+  z-index: -1;
   position: absolute;
   width: 100vw;
-  height: 34px;
+  height: 36px;
   background: #fff;
+}
+.gnb-list > li:hover .gnb-sub-list {
+  display: flex;
 }
 .is--active {
   display: block;
+}
+
+/* #gnb-belief {
+  left: 0; 
+} */
+#gnb-goods {
+  left: -40px;
+}
+#gnb-post {
+  left: -240px;
+}
+#gnb-spa {
+  left: -82px;
+}
+#gnb-store {
+  right: -20px;
 }
 /* //여긴 보류 */
 
