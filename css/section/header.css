@@ -480,11 +480,15 @@ section.sidenav {
   line-height: 1.5;
 }
 .sidenav-gnb-sub-list {
-  /* display: none; */
+  display: none;
 
   background: #faf9f5;
   padding: 10px 0 16px;
 }
+.sidenav-gnb-sub-list.active {
+  display: block;
+}
+
 .sidenav-gnb-sub-list li a {
   font-size: 16px;
   padding: 5px 0 5px 44px;

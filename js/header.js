@@ -26,6 +26,7 @@ gnbItems.forEach((item) => {
   });
 });
 //mouseover-mouseout
+
 // 검색 영역
 let modalWrap = document.querySelector(".modal");
 let topSearchBtn = document.querySelector(".search-btn");
@@ -48,7 +49,7 @@ searchCloseBtn.addEventListener("click", () => {
 let sideNavBtn = document.querySelector(".side-nav-btn");
 let sideNavClose = document.querySelector(".sidenav-close");
 let sideNavArea = document.querySelector("section.sidenav");
-let sideNavWrap = document.querySelector(".sidenav-wrap");
+// let sideNavWrap = document.querySelector(".sidenav-wrap");
 sideNavBtn.addEventListener("click", function () {
   sideNavArea.style.display = "block";
   //스크롤 금지
@@ -60,20 +61,20 @@ sideNavClose.addEventListener("click", function () {
   // document.body.style.overflow = "unset";
 });
 
-let sideNavGnbSubList = document.querySelectorAll(".sidenav-gnb-sub-list");
-// const onClickBox = (e) => {
-//   // e.style.display = "block";
-//   console.log(e.target);
-//   let subList = e.querySelector(".sidenav-gnb-sub-list");
-//   e.style.display = "block";
-// };
+// chapGPT 참고...
+const menuItems = document.querySelectorAll(".sidenav-gnb-list > li > a");
 
-// const lis = document.querySelectorAll(".sidenav-gnb-list > li");
-// console.log(lis);
-// lis.forEach((box) => {
-//   box.addEventListener("click", onClickBox);
-// });
-// const boxes = document.querySelectorAll(".sidenav-gnb-sub-list");
-// boxes.forEach((box) => {
-//   box.addEventListener("click", onClickBox);
-// });
+menuItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    const submenu = item.nextElementSibling;
+    if (submenu.classList.contains("active")) {
+      submenu.classList.remove("active");
+    } else {
+      const activeMenu = document.querySelector(".sidenav-gnb-sub-list.active");
+      if (activeMenu) {
+        activeMenu.classList.remove("active");
+      }
+      submenu.classList.add("active");
+    }
+  });
+});
