@@ -108,3 +108,30 @@
     top: 70px;
   }
 }
+/* 이제 여기부터 작업 시작하면 됨 */
+@media screen and (max-width: 1024px) {
+  .footer::before {
+    content: "";
+    height: 0;
+  }
+  .footer-wrap {
+    display: none;
+  }
+  .footer-mobile {
+    display: block;
+  }
+}
+.footer-sns-mo {
+  border-bottom: 1px solid #eee;
+  height: 56px;
+}
+.footer-sns-mo-wrap {
+  text-align: center;
+  line-height: 56px;
+  vertical-align: middle;
+}
+.footer-sns-mo-wrap a {
+  display: inline-block;
+  width: 40px;
+  height: 30px;
+}
