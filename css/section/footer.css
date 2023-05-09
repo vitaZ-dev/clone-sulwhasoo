@@ -157,6 +157,12 @@
   height: 8px;
   background: url("../../images/ico_arr_footer_down.png") no-repeat center;
   background-size: contain;
+
+  transition: transform 0.4s;
+}
+.footer-copy-mo.is-active::after {
+  content: "";
+  transform: translateY(-50%) rotate(180deg);
 }
 .footer-copy-mo span {
   font-size: 12px;
@@ -186,6 +192,11 @@
   background: #f8f7f5;
   border-top: 1px solid #eee;
   padding: 16px 30px 32px 30px;
+
+  display: none;
+}
+.footer-mo-wrap.show {
+  display: block;
 }
 .footer-info-mo a {
   position: relative;
