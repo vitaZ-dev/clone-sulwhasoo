@@ -172,7 +172,7 @@
 .footer-copy-mo span strong {
   font-weight: 700;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 767px) {
   .footer-copy-mo {
     padding: 0 15px;
     height: 15.555vw;
@@ -180,11 +180,11 @@
   .footer-copy-mo::after {
     content: "";
     right: 20px;
-    width: 21px;
-    height: 12px;
+    width: 4.166vw;
+    height: 15.555vw;
   }
   .footer-copy-mo span {
-    font-size: 21px;
+    font-size: 3.333vw;
   }
 }
 .footer-mo-wrap {
@@ -197,6 +197,14 @@
 }
 .footer-mo-wrap.show {
   display: block;
+}
+@media screen and (max-width: 767px) {
+  .footer-mo-wrap {
+    padding: 4.444vw 15px 8.888vw;
+  }
+  .footer-info-mo {
+    word-break: keep-all;
+  }
 }
 .footer-info-mo a {
   position: relative;
@@ -221,6 +229,19 @@
 .footer-info-mo a:last-child::after {
   content: "";
   display: none;
+}
+@media screen and (max-width: 767px) {
+  .footer-info-mo a {
+    padding-right: 4.444vw;
+    padding-left: 2.222vw;
+    font-size: 3.333vw;
+  }
+  .footer-info-mo a:first-child {
+    padding-left: 0;
+  }
+  .footer-info-mo a:hover {
+    text-decoration: underline;
+  }
 }
 .footer-counsel-mo {
   color: #888;
