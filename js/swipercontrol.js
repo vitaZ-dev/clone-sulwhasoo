@@ -62,7 +62,7 @@ let recommendSwiper = new Swiper(".sw-recommend", {
     },
   },
 });
-// stop & play 버튼
+// stop & play 버튼 동작
 let stopBtn = document.querySelector(".sw-stop");
 let container = document.querySelector(".sw-recommend");
 stopBtn.addEventListener("click", () => {
