@@ -45,6 +45,7 @@
 }
 
 .sw-sns .sns-info {
+  color: #4d5866;
   position: absolute;
   left: 50%;
   top: 100%;
@@ -61,6 +62,7 @@
 }
 .sw-sns .sns-info > a {
   font-size: 13px;
+  font-family: "Noto Sans", sans-serif !important;
 }
 .sw-sns .sns-info > p {
   font-family: "Noto Sans", sans-serif !important;
