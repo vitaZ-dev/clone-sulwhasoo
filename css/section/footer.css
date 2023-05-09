@@ -110,6 +110,9 @@
 }
 /* 이제 여기부터 작업 시작하면 됨 */
 @media screen and (max-width: 1024px) {
+  .footer {
+    padding-bottom: 0;
+  }
   .footer::before {
     content: "";
     height: 0;
@@ -134,4 +137,95 @@
   display: inline-block;
   width: 40px;
   height: 30px;
+}
+.footer-copy-mo {
+  position: relative;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  text-align: left;
+  padding: 0 30px;
+  background: #f8f7f5;
+}
+.footer-copy-mo::after {
+  content: "";
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 8px;
+  background: url("../../images/ico_arr_footer_down.png") no-repeat center;
+  background-size: contain;
+}
+.footer-copy-mo span {
+  font-size: 12px;
+  font-weight: 400;
+  color: #767676;
+}
+.footer-copy-mo span strong {
+  font-weight: 700;
+}
+@media screen and (max-width: 720px) {
+  .footer-copy-mo {
+    padding: 0 15px;
+    height: 15.555vw;
+  }
+  .footer-copy-mo::after {
+    content: "";
+    right: 20px;
+    width: 21px;
+    height: 12px;
+  }
+  .footer-copy-mo span {
+    font-size: 21px;
+  }
+}
+.footer-mo-wrap {
+  position: relative;
+  background: #f8f7f5;
+  border-top: 1px solid #eee;
+  padding: 16px 30px 32px 30px;
+}
+.footer-info-mo a {
+  position: relative;
+  padding-right: 15px;
+  color: #222;
+  font-size: 11px;
+}
+.footer-info-mo a strong {
+  font-weight: 700;
+}
+.footer-info-mo a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 10px;
+  background: #999;
+}
+.footer-info-mo a:last-child::after {
+  content: "";
+  display: none;
+}
+.footer-counsel-mo {
+  color: #888;
+  margin-top: 15px;
+  font-size: 10px;
+  line-height: 21px;
+}
+.footer-counsel-mo span:first-child {
+  padding-right: 10px;
+}
+
+.footer-mark-mo {
+  position: absolute;
+  right: 30px;
+  bottom: 32px;
+}
+.footer-mark-mo img {
+  width: 48px;
 }
