@@ -22,44 +22,56 @@
 .sw-sns .swiper-slide:first-child {
   margin-left: 1px;
 } */
-.sw-sns .swiper-slide a {
+.sw-sns .swiper-slide > a {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 100%;
   height: 300px;
   overflow: hidden;
 }
-.sw-sns .swiper-slide a:hover img {
-  transform: scale(1.1) translateY(-50px);
+.sw-sns .swiper-slide:hover img {
+  transform: scale(1.1) translateY(-30px);
 }
 
 .sw-sns .swiper-slide img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   /* object-fit: cover; */
-  transform: scale(1.1);
 
   transition: transform 0.2s;
 }
-.sw-sns .swiper-slide p {
+
+.sw-sns .sns-info {
   position: absolute;
   left: 50%;
   top: 100%;
   transform: translateX(-50%);
-  width: 400%;
-  height: 500px;
+  width: 100%;
+  height: 32%;
+  padding-top: 16px;
+  padding-bottom: 55px;
   background: #fff;
   text-align: center;
   border-radius: 100%;
 
-  transition: top 0.1s;
+  transition: top 0.1s linear;
 }
-
-.sw-sns .swiper-slide a:hover p {
+.sw-sns .sns-info > a {
+  font-size: 13px;
+}
+.sw-sns .sns-info > p {
+  font-family: "Noto Sans", sans-serif !important;
+  line-height: 2;
+  padding: 0 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+}
+.sw-sns .swiper-slide:hover .sns-info {
   top: 80%;
 }
 
