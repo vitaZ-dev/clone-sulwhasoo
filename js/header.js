@@ -83,7 +83,6 @@ menuItems.forEach((item) => {
 const menuSelected = document.querySelectorAll(".sidenav-gnb-list > li > a");
 menuSelected.forEach((select) => {
   select.addEventListener("click", () => {
-    console.log(select);
     let icon = select.querySelector(".icon-select");
     icon.classList.toggle("icon-checked");
   });
