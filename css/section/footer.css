@@ -274,7 +274,7 @@
 .footer-mark-mo {
   position: absolute;
   right: 30px;
-  bottom: 8.888vw;
+  bottom: 32px;
 }
 .footer-mark-mo img {
   width: 48px;
@@ -283,7 +283,7 @@
   .footer-mark-mo {
     width: 13.333vw;
     right: 15px;
-    bottom: 32px;
+    bottom: 8.888vw;
   }
   .footer-mark-mo img {
     width: 13.333vw;
