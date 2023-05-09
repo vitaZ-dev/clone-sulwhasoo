@@ -501,7 +501,7 @@ section.sidenav {
   right: 20px;
   width: 16px;
   height: 16px;
-  transform: translateY(-50%);
+  transform: translateY(-75%);
 }
 .icon-select::before {
   content: "";
