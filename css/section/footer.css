@@ -139,6 +139,17 @@
   width: 40px;
   height: 30px;
 }
+
+.footer-bottom-mo {
+  height: 56px;
+  overflow: hidden;
+
+  transition: height 0.5s;
+}
+.footer-bottom-mo.show {
+  height: 160px;
+}
+
 .footer-copy-mo {
   position: relative;
   width: 100%;
@@ -193,11 +204,6 @@
   background: #f8f7f5;
   border-top: 1px solid #eee;
   padding: 16px 30px 32px 30px;
-
-  display: none;
-}
-.footer-mo-wrap.show {
-  display: block;
 }
 @media screen and (max-width: 767px) {
   .footer-mo-wrap {
