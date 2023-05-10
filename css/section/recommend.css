@@ -108,7 +108,7 @@
 }
 @media screen and (max-width: 1024px) {
   .recommend .pagination-wrapper {
-    margin-top: 36px;
+    margin-top: 30px;
   }
   .recommend .pagination-wrapper .swiper-pagination {
     width: 300px;

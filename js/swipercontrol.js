@@ -59,6 +59,7 @@ let recommendSwiper = new Swiper(".sw-recommend", {
     720: {
       slidesPerView: 3,
       slidesPerGroup: 3,
+      spaceBetween: 20,
     },
   },
 });
