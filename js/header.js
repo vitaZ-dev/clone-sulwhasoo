@@ -69,12 +69,15 @@ menuItems.forEach((item) => {
     const submenu = item.nextElementSibling;
     if (submenu.classList.contains("active")) {
       submenu.classList.remove("active");
+      item.style.fontWeight = "500";
     } else {
       const activeMenu = document.querySelector(".sidenav-gnb-sub-list.active");
       if (activeMenu) {
         activeMenu.classList.remove("active");
+        item.style.fontWeight = "500";
       }
       submenu.classList.add("active");
+      item.style.fontWeight = "700";
     }
   });
 });
