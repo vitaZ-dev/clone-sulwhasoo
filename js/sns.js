@@ -12,15 +12,17 @@ window.onload = function () {
       },
 
       1480: {
-        slidesPerView: 4,
+        slidesPerView: 4, 
       },
 
       970: {
         slidesPerView: 3,
+       
       },
 
       680: {
         slidesPerView: 2,
+        
       },
     },
   });
