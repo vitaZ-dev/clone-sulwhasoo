@@ -109,7 +109,7 @@
     top: 70px;
   }
 }
-/* 이제 여기부터 작업 시작하면 됨 */
+
 @media screen and (max-width: 1024px) {
   .footer {
     padding-bottom: 0;
@@ -142,9 +142,10 @@
 
 .footer-bottom-mo {
   height: 56px;
+  background: #f8f7f5;
   overflow: hidden;
 
-  transition: height 0.5s;
+  transition: height 0.3s;
 }
 .footer-bottom-mo.show {
   height: 160px;
@@ -183,6 +184,14 @@
 }
 .footer-copy-mo span strong {
   font-weight: 700;
+}
+@media screen and (max-width: 767px) {
+  .footer-bottom-mo {
+    height: 15.555vw;
+  }
+  .footer-bottom-mo.show {
+    height: calc(15.555vw + 336px);
+  }
 }
 @media screen and (max-width: 767px) {
   .footer-copy-mo {
