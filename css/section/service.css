@@ -1,10 +1,20 @@
+.service .inner {
+  display: flex;
+  gap: 30px;
+  /* align-items: center; */
+  /* flex-wrap: wrap; */
+}
 .package {
-  float: left;
   text-align: center;
+  height: 38.4vw;
 }
 .package-info {
   display: block;
   width: 100%;
+  height: 100%;
+}
+.package-info img {
+  
   height: 100%;
 }
 .service-title {
@@ -24,8 +34,8 @@
 }
 
 .store {
-  float: right;
   text-align: center;
+  height: 38.4vw;
 }
 .store-info {
   display: block;
@@ -33,8 +43,13 @@
   height: 100%;
 }
 
-.store-info img {
-  object-fit: cover;
-  width: 708px;
-  height: 600px;
+.store-info img {  
+  height: 100%;
+}
+@media (max-width: 1480px) {
+  /* .store-info,
+  .package-info img {
+    width: 100%;
+    max-height: none;
+  } */
 }

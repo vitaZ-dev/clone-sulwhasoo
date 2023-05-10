@@ -3,9 +3,6 @@
   display: block;
   height: 540px;
 }
-.best-link  img {
-  width: 100%;
-}
 .best-info {
   position: absolute;
   bottom: 88px;
@@ -45,31 +42,4 @@
   font-weight: 400;
   font-family: "Theinhardt", "Noto Sans KR", sans-serif;
   letter-spacing: -0.35px;
-}
-@media screen and (max-width: 1660px) {
-
-  .best-info {
-      position: absolute;
-      bottom: 90px;
-      left: 170px;
-      z-index: 999;
-    }
-  
-}
-@media screen and (max-width: 1024px) {
-  .best-info {
-  }
-  .best-title{
-    font-size: ;
-  }
-  .best-desc{}
-  .best-btn{}
-}
-
-@media screen and (max-width: 760px) {
-  .best-info {
-  }
-  .best-title{}
-  .best-desc{}
-  .best-btn{}
 }
