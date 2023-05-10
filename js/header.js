@@ -1,3 +1,5 @@
+const $body = document.querySelector("body");
+
 // header _ select-language
 let langBtn = document.querySelector(".language-toggle");
 let langBtn_con = document.querySelector(".select-language");
@@ -55,6 +57,7 @@ sideNavBtn.addEventListener("click", function () {
   sideNavArea.classList.add("sidenav-active");
 
   //스크롤 금지
+  $body.classList.add("body-hide");
   // document.body.style.overflow = "hidden";
 });
 sideNavClose.addEventListener("click", function () {
@@ -62,28 +65,41 @@ sideNavClose.addEventListener("click", function () {
   sideNavArea.classList.remove("sidenav-active");
 
   // 다시 스크롤
+  $body.classList.remove("body-hide");
   // document.body.style.overflow = "unset";
 });
 
+// sidenav - li 선택 시 sublist 애니메이션
 const menuItems = document.querySelectorAll(".sidenav-gnb-list > li > a");
-
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {
     const submenu = item.nextElementSibling;
     if (submenu.classList.contains("active")) {
       submenu.classList.remove("active");
-      item.style.fontWeight = "500";
     } else {
       const activeMenu = document.querySelector(".sidenav-gnb-sub-list.active");
       if (activeMenu) {
         activeMenu.classList.remove("active");
-        item.style.fontWeight = "500";
       }
       submenu.classList.add("active");
-      item.style.fontWeight = "700";
     }
   });
 });
+// const menuLiItems = document.querySelectorAll(".sidenav-gnb-list > li");
+// menuLiItems.forEach((items) => {
+//   items.addEventListener("click", () => {
+//     let submenu = items.querySelector(".sidenav-gnb-sub-list");
+//     if (items.classList.contains("active")) {
+//       items.classList.remove("active");
+//     } else {
+//       const activeMenu = document.querySelector(".sidenav-gnb-sub-list.active");
+//       if (activeMenu) {
+//         activeMenu.classList.remove("active");
+//       }
+//       items.classList.add("active");
+//     }
+//   });
+// });
 
 // sidenav - 선택 시 + 모양 아이콘 애니메이션
 const menuSelected = document.querySelectorAll(".sidenav-gnb-list > li > a");
