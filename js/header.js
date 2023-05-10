@@ -28,19 +28,19 @@ gnbItems.forEach((item) => {
 //mouseover-mouseout
 
 // 검색 영역
-let modalWrap = document.querySelector(".modal");
+let dimArea = document.querySelector(".dim");
 let topSearchBtn = document.querySelector(".search-btn");
 let searchCloseBtn = document.querySelector(".search-close-btn");
 let searchArea = document.querySelector(".header-top-search");
 topSearchBtn.addEventListener("click", () => {
   searchArea.style.display = "block";
-  modalWrap.style.display = "block";
+  dimArea.style.display = "block";
   //스크롤 금지
   document.body.style.overflow = "hidden";
 });
 searchCloseBtn.addEventListener("click", () => {
   searchArea.style.display = "none";
-  modalWrap.style.display = "none";
+  dimArea.style.display = "none";
   // 다시 스크롤
   document.body.style.overflow = "unset";
 });
@@ -51,17 +51,20 @@ let sideNavClose = document.querySelector(".sidenav-close");
 let sideNavArea = document.querySelector("section.sidenav");
 // let sideNavWrap = document.querySelector(".sidenav-wrap");
 sideNavBtn.addEventListener("click", function () {
-  sideNavArea.style.display = "block";
+  // sideNavArea.style.display = "block";
+  sideNavArea.classList.add("sidenav-active");
+
   //스크롤 금지
   // document.body.style.overflow = "hidden";
 });
 sideNavClose.addEventListener("click", function () {
-  sideNavArea.style.display = "none";
+  // sideNavArea.style.display = "none";
+  sideNavArea.classList.remove("sidenav-active");
+
   // 다시 스크롤
   // document.body.style.overflow = "unset";
 });
 
-// chapGPT 참고...
 const menuItems = document.querySelectorAll(".sidenav-gnb-list > li > a");
 
 menuItems.forEach((item) => {
