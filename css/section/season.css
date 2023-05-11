@@ -1,4 +1,4 @@
-.season-title {
+.title {
   font-family: "Theinhardt", "Noto Sans KR", sans-serif;
   font-size: 28px;
   font-weight: 700;
@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
 }
-.season-serum {
+.serum {
   display: block;
   width: 342px;
   height: 522px;
@@ -20,16 +20,15 @@
   width: 100%;
   padding: 11px;
 }
-.season-info-serum {
-margin-top: 40px;
-text-align: center;
+.info-serum {
+  margin-top: 40px;
+  text-align: center;
 }
-.season-title{
+.season-title {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: -0.5px;
   padding-bottom: 3px;
- 
 }
 .season-desc {
   font-size: 16px;
@@ -44,43 +43,42 @@ text-align: center;
   letter-spacing: -0.4px;
   line-height: 24px;
 }
-.season-duo {
+.duo {
   position: relative;
   width: 708px;
   height: 522px;
 }
-.season-duo img {
+.duo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.season-info-duo{
+.info-duo {
   position: absolute;
   bottom: 0;
   margin-bottom: 48px;
   margin-left: 62px;
   line-height: 27px;
 }
-.season-duo-title{
-font-size: 24px;
-font-weight: 700;
-letter-spacing: -0.6px;
-padding-bottom: 3px;
-
+.duo-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  padding-bottom: 3px;
 }
-.season-duo-desc{
-font-size: 16px;
-font-weight: 400;
-color: #666;
-padding-top: 7px;
+.duo-desc {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+  padding-top: 7px;
 }
 
-.season-cream {
+.cream {
   width: 342px;
   height: 522px;
   background: #ededed;
 }
-.sesason-info-cream {
-margin-top: 40px;
-text-align: center;
+.info-cream {
+  margin-top: 40px;
+  text-align: center;
 }
