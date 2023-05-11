@@ -16,14 +16,16 @@ gnbItems.forEach((item) => {
   item.addEventListener("mouseenter", () => {
     // gnbBg.style.display = "block";
     gnbWrap.setAttribute("style", "border-bottom: 1px solid #d5d5d5;");
-    gnbBg.setAttribute("style", "display: block;");
+    // gnbBg.setAttribute("style", "display: block;");
+    gnbBg.classList.add("gnb-sub-list-bg-active");
   });
 });
 gnbItems.forEach((item) => {
   item.addEventListener("mouseleave", () => {
     // gnbBg.style.display = "none";
     gnbWrap.setAttribute("style", "border-bottom: none;");
-    gnbBg.setAttribute("style", "display: none;");
+    // gnbBg.setAttribute("style", "display: none;");
+    gnbBg.classList.remove("gnb-sub-list-bg-active");
   });
 });
 //mouseover-mouseout

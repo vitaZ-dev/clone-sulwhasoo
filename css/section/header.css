@@ -225,12 +225,15 @@
   border-bottom: 2px solid #000;
 }
 .gnb-sub-list {
+  display: flex;
   position: absolute;
   top: 48px;
   height: 34px;
   color: #555;
 
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s;
 }
 .gnb-list > li {
   position: relative;
@@ -252,15 +255,33 @@
   padding-left: 0;
 }
 .gnb-sub-list-bg {
-  display: none;
+  display: flex;
   z-index: -1;
   position: absolute;
+  left: 0;
+  top: 126px;
   width: 100vw;
   height: 36px;
+  overflow: hidden;
+}
+.gnb-sub-list-bg::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
   background: #fff;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+.gnb-sub-list-bg-active::before {
+  opacity: 1;
+  transform: translateY(0);
 }
 .gnb-list > li:hover .gnb-sub-list {
-  display: flex;
+  visibility: visible;
+  opacity: 1;
 }
 
 /* #gnb-belief {
@@ -527,7 +548,6 @@ section.sidenav-active {
 
 .icon-select {
   position: absolute;
-  /* z-index: -1; */
   top: 50%;
   right: 20px;
   width: 16px;
