@@ -501,16 +501,17 @@ section.sidenav-active {
 }
 /* 애니메이션 진행 중 */
 .sidenav-gnb-sub-list {
-  display: block;
+  display: none;
+  background: #faf9f5;
+  /* 	
   height: 0;
   overflow: hidden;
-  background: #faf9f5;
 
-  transition: height 0.5s;
+  transition: height 0.5s; */
 }
 .sidenav-gnb-sub-list.is--active {
   display: block;
-  height: fit-content;
+  /* height: fit-content; */
 }
 
 .sidenav-gnb-sub-list li:first-child {
