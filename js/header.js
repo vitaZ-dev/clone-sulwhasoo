@@ -93,7 +93,9 @@ menuItems.forEach((item) => {
     if (submenu.classList.contains("is--active")) {
       submenu.classList.remove("is--active");
     } else {
-      const activeMenu = document.querySelector(".sidenav-gnb-sub-list.active");
+      const activeMenu = document.querySelector(
+        ".sidenav-gnb-sub-list.is--active"
+      );
       if (activeMenu) {
         activeMenu.classList.remove("is--active");
       }
@@ -101,21 +103,6 @@ menuItems.forEach((item) => {
     }
   });
 });
-// const menuLiItems = document.querySelectorAll(".sidenav-gnb-list > li");
-// menuLiItems.forEach((items) => {
-//   items.addEventListener("click", () => {
-//     let submenu = items.querySelector(".sidenav-gnb-sub-list");
-//     if (items.classList.contains("active")) {
-//       items.classList.remove("active");
-//     } else {
-//       const activeMenu = document.querySelector(".sidenav-gnb-sub-list.active");
-//       if (activeMenu) {
-//         activeMenu.classList.remove("active");
-//       }
-//       items.classList.add("active");
-//     }
-//   });
-// });
 
 // sidenav - 선택 시 + 모양 아이콘 애니메이션
 const menuSelected = document.querySelectorAll(".sidenav-gnb-list > li > a");

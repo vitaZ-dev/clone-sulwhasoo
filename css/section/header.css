@@ -499,17 +499,19 @@ section.sidenav-active {
   font-size: 23px;
   line-height: 1.5;
 }
+/* 애니메이션 진행 중 */
 .sidenav-gnb-sub-list {
-  display: none;
-
+  display: block;
+  height: 0;
+  overflow: hidden;
   background: #faf9f5;
+
+  transition: height 0.5s;
 }
 .sidenav-gnb-sub-list.is--active {
   display: block;
+  height: fit-content;
 }
-/* .sidenav-gnb-list > li.active {
-	height: fit-content;
-} */
 
 .sidenav-gnb-sub-list li:first-child {
   padding-top: 10px;
