@@ -262,9 +262,6 @@
 .gnb-list > li:hover .gnb-sub-list {
   display: flex;
 }
-.is--active {
-  display: block;
-}
 
 /* #gnb-belief {
   left: 0; 
@@ -507,7 +504,7 @@ section.sidenav-active {
 
   background: #faf9f5;
 }
-.sidenav-gnb-sub-list.active {
+.sidenav-gnb-sub-list.is--active {
   display: block;
 }
 /* .sidenav-gnb-list > li.active {

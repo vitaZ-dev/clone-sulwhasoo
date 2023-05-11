@@ -90,14 +90,14 @@ const menuItems = document.querySelectorAll(".sidenav-gnb-list > li > a");
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {
     const submenu = item.nextElementSibling;
-    if (submenu.classList.contains("active")) {
-      submenu.classList.remove("active");
+    if (submenu.classList.contains("is--active")) {
+      submenu.classList.remove("is--active");
     } else {
       const activeMenu = document.querySelector(".sidenav-gnb-sub-list.active");
       if (activeMenu) {
-        activeMenu.classList.remove("active");
+        activeMenu.classList.remove("is--active");
       }
-      submenu.classList.add("active");
+      submenu.classList.add("is--active");
     }
   });
 });
