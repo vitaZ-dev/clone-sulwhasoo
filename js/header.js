@@ -34,17 +34,34 @@ let dimArea = document.querySelector(".dim");
 let topSearchBtn = document.querySelector(".search-btn");
 let searchCloseBtn = document.querySelector(".search-close-btn");
 let searchArea = document.querySelector(".header-top-search");
+let gnbNav = document.querySelector(".gnb");
 topSearchBtn.addEventListener("click", () => {
-  searchArea.style.display = "block";
+  // searchArea.style.display = "block";
+  searchArea.classList.add("header-top-search-active");
   dimArea.style.display = "block";
   //스크롤 금지
-  document.body.style.overflow = "hidden";
+  // document.body.style.overflow = "hidden";
+  $body.classList.add("body-hide");
+
+  gnbNav.classList.add("gnb-hide");
 });
 searchCloseBtn.addEventListener("click", () => {
-  searchArea.style.display = "none";
+  // searchArea.style.display = "none";
+  searchArea.classList.remove("header-top-search-active");
   dimArea.style.display = "none";
   // 다시 스크롤
-  document.body.style.overflow = "unset";
+  // document.body.style.overflow = "unset";
+  $body.classList.remove("body-hide");
+
+  gnbNav.classList.remove("gnb-hide");
+});
+// 검색폼 사라지는 컨셉 변경
+const $header = document.querySelector(".header");
+$header.addEventListener("mouseleave", () => {
+  searchArea.classList.remove("header-top-search-active");
+  dimArea.style.display = "none";
+  $body.classList.remove("body-hide");
+  gnbNav.classList.remove("gnb-hide");
 });
 
 // side navigation

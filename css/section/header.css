@@ -136,6 +136,10 @@
 
 .gnb {
   height: 48px;
+  visibility: visible;
+}
+.gnb-hide {
+  visibility: hidden;
 }
 @media screen and (max-width: 1024px) {
   .header .inner {
@@ -281,15 +285,21 @@
 
 /* header-top-search */
 .header-top-search {
-  display: none;
+  display: block;
   position: absolute;
-  top: 78px;
+  top: 126px;
   width: 100%;
-  height: 212px;
-  padding-top: 60px;
+  height: 0px;
+  overflow: hidden;
   background: #fff;
-
   z-index: 999999;
+  transition: height 0.5s;
+}
+.header-top-search-active {
+  height: calc(212px - 48px);
+}
+.header-top-search form {
+  padding-top: calc(60px - 48px);
 }
 .search-box {
   display: flex;
