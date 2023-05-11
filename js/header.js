@@ -88,29 +88,103 @@ sideNavClose.addEventListener("click", function () {
 });
 
 // sidenav - li 선택 시 sublist 애니메이션
-const menuItems = document.querySelectorAll(".sidenav-gnb-list > li > a");
+let menuItems = document.querySelectorAll(".sidenav-gnb-list > li > a");
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {
     const submenu = item.nextElementSibling;
     if (submenu.classList.contains("is--active")) {
       submenu.classList.remove("is--active");
+      // item.parentNode.classList.remove("show");
     } else {
       const activeMenu = document.querySelector(
         ".sidenav-gnb-sub-list.is--active"
       );
       if (activeMenu) {
         activeMenu.classList.remove("is--active");
+        // item.parentNode.classList.remove("show");
       }
       submenu.classList.add("is--active");
+      // item.parentNode.classList.add("show");
     }
   });
 });
+// const menuLis = document.querySelectorAll(".sidenav-gnb-list > li");
+// menuLis.forEach((items) => {
+//   items.addEventListener("click", () => {
+//     // if (items.classList.contains("show")) {
+//     //   submenu.classList.remove("show");
+//     // } else {
+//     //   const activeMenu = document.querySelector(
+//     //     ".sidenav-gnb-sub-list.is--active"
+//     //   );
+//     //   if (activeMenu) {
+//     //     activeMenu.classList.remove("show");
+//     //   }
+//     //   submenu.classList.add("show");
+//     // }
+//     if (items.classList.contains("show")) {
+//       items.classList.remove("show");
+//     } else {
+//       const liSelected = items.querySelector(".show");
+//       if (liSelected) {
+//         liSelected.classList.remove("show");
+//       }
+//       items.classList.add("show");
+//     }
+//     ///
+//   });
+// });
+
+// const listItems = document.querySelectorAll(".sidenav-gnb-list > li");
+// listItems.forEach((item) => {
+//   item.addEventListener("click", (listItem) => {
+//     if (listItem.classList.contains("show")) {
+//       listItem.classList.remove("show");
+//     } else {
+//       listItem.classList.add("show");
+//     }
+//     // listItems.forEach((item2) => {
+//     //   console.log(item2);
+//     //   item2.classList.remove("show");
+//     // });
+//     // if (item.classList.contains("show")) {
+//     //   item.classList.remove("show");
+//     // } else {
+//     //   item.classList.add("show");
+//     // }
+//   });
+// });
 
 // sidenav - 선택 시 + 모양 아이콘 애니메이션
-const menuSelected = document.querySelectorAll(".sidenav-gnb-list > li > a");
-menuSelected.forEach((select) => {
-  select.addEventListener("click", () => {
-    let icon = select.querySelector(".icon-select");
-    icon.classList.toggle("icon-checked");
+// let menuSelected = document.querySelectorAll(".sidenav-gnb-list > li > a");
+// menuSelected.forEach((select) => {
+//   select.classList.remove("icon-checked");
+//   select.addEventListener("click", () => {
+//     let icon = select.querySelector(".icon-select");
+//     if (select.classList.contains("icon-checked")) {
+//       icon.classList.remove("icon-checked");
+//     } else {
+//       icon.classList.add("icon-checked");
+//     }
+//   });
+// });
+
+const sidenavList = document.querySelectorAll(".sidenav-gnb-list > li");
+sidenavList.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    // 이전에 선택된 요소 찾기
+    const previousSelected = document.querySelector(
+      ".sidenav-gnb-list > li.show"
+    );
+    // 클릭한 요소에 show 클래스 추가
+    event.currentTarget.classList.add("show");
+    // 이전에 선택된 요소에서 show 클래스 제거
+    if (previousSelected) {
+      previousSelected.classList.remove("show");
+    }
+    // 같은 요소를 두 번 클릭한 경우 show 클래스 제거
+    if (previousSelected === event.currentTarget) {
+      event.currentTarget.classList.remove("show");
+    }
   });
 });

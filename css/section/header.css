@@ -79,6 +79,8 @@
   line-height: 1.5;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
   white-space: nowrap;
+
+  z-index: 999999;
 }
 .language-selected ~ .language-list {
   display: block;
@@ -309,7 +311,7 @@
   height: 0px;
   overflow: hidden;
   background: #fff;
-  z-index: 999999;
+  z-index: 999998;
   transition: height 0.5s;
 }
 .header-top-search-active {
@@ -509,6 +511,9 @@ section.sidenav-active {
 
   transition: height 0.3s; */
 }
+.sidenav-gnb-list > li.show > a {
+  font-weight: 700;
+}
 .sidenav-gnb-list li a {
   position: relative;
   width: 100%;
@@ -600,7 +605,6 @@ section.sidenav-active {
 .sidenav-link > a:hover {
   text-decoration: underline;
 }
-/* 여기 자리 배치는 다시하기 */
 .sidenav-language {
   width: 100%;
   padding: 18px 20px;
