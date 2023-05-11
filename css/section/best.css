@@ -43,3 +43,8 @@
   font-family: "Theinhardt", "Noto Sans KR", sans-serif;
   letter-spacing: -0.35px;
 }
+.best-btn:hover {
+  background: rgb(255, 104, 3);
+  color: #fff;
+  border: #fff;
+}

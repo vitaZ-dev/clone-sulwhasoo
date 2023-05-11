@@ -14,7 +14,6 @@
   height: 100%;
 }
 .package-info img {
-  
   height: 100%;
 }
 .service-title {
@@ -32,6 +31,11 @@
   font-family: "Theinhardt", "Noto Sans KR", sans-serif;
   letter-spacing: -0.7px;
 }
+.sercice-btn:hover {
+  background: rgb(255, 104, 3);
+  color: #fff;
+  border: #fff;
+}
 
 .store {
   text-align: center;
@@ -43,7 +47,7 @@
   height: 100%;
 }
 
-.store-info img {  
+.store-info img {
   height: 100%;
 }
 @media (max-width: 1480px) {
