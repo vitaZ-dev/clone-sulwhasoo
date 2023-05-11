@@ -98,8 +98,22 @@
   <body>
     <div class="wrap">
       <!-- 헤더 -->
+      <div
+        class="dim"
+        style="
+          display: none;
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(0, 0, 0, 0.3);
+          z-index: 999999;
+        "
+      ></div>
       <header class="header">
         <div class="inner">
+          <button class="side-nav-btn">
+            <i class="icon-nav"></i>
+          </button>
           <div class="logo">
             <h1>
               <a href="#" class="logo-title"></a>
@@ -120,14 +134,6 @@
                 <li><a href="#">ประเทศไทย/ไทย</a></li>
                 <li><a href="#">USA/English</a></li>
               </ul>
-              <script>
-                let langBtn = document.querySelector(".language-toggle");
-                let langBtn_con = document.querySelector(".select-language");
-                langBtn.addEventListener("click", () => {
-                  langBtn.classList.toggle("language-selected");
-                  langBtn_con.classList.toggle("language-selected-active");
-                });
-              </script>
             </div>
             <div class="top-link clearfix">
               <a href="#" class="find-store-link">매장찾기</a>
@@ -141,30 +147,95 @@
             <ul class="gnb-list">
               <li>
                 <a href="#">브랜드 빌리프</a>
-                <ul>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
+                <ul class="gnb-sub-list clearfix" id="gnb-belief">
+                  <li>
+                    <a href="#">브랜드 빌리프</a>
+                  </li>
+                  <li>
+                    <a href="#">브랜드 캠페인</a>
+                  </li>
+                  <li>
+                    <a href="#">브랜드 엠배서더</a>
+                  </li>
                 </ul>
               </li>
               <li>
                 <a href="#">베스트셀러</a>
+                <ul class="gnb-sub-list clearfix" id="gnb-best">
+                  <li>
+                    <a href="#">베스트셀러</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="#">제품</a>
+                <ul class="gnb-sub-list clearfix" id="gnb-goods">
+                  <li>
+                    <a href="#">스킨케어</a>
+                  </li>
+                  <li>
+                    <a href="#">메이크업</a>
+                  </li>
+                  <li>
+                    <a href="#">남성</a>
+                  </li>
+                  <li>
+                    <a href="#">진설</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="#">설화수 포스트</a>
+                <ul class="gnb-sub-list clearfix" id="gnb-post">
+                  <li>
+                    <a href="#">설화수 포스트</a>
+                  </li>
+                  <li>
+                    <a href="#">명작컬렉션</a>
+                  </li>
+                  <li>
+                    <a href="#">설화수 스타일</a>
+                  </li>
+                  <li>
+                    <a href="#">설화문화전</a>
+                  </li>
+                  <li>
+                    <a href="#">설화매거진</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="#">스파</a>
+                <ul class="gnb-sub-list clearfix" id="gnb-spa">
+                  <li>
+                    <a href="#">소개</a>
+                  </li>
+                  <li>
+                    <a href="#">스파 프로그램</a>
+                  </li>
+                  <li>
+                    <a href="#">예약</a>
+                  </li>
+                  <li>
+                    <a href="#">매장 찾기</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="#">플래그십 스토어</a>
+                <ul class="gnb-sub-list clearfix" id="gnb-store">
+                  <li>
+                    <a href="#">설화수 북촌</a>
+                  </li>
+                  <li>
+                    <a href="#">설화수 도산</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </nav>
         </div>
+        <div class="gnb-sub-list-bg"></div>
         <div class="header-top-search">
           <form>
             <div class="search-box">
@@ -181,17 +252,139 @@
           </div>
         </div>
       </header>
-      <script>
-        let topSearchBtn = document.querySelector(".search-btn");
-        let searchCloseBtn = document.querySelector(".search-close");
-        let searchArea = document.querySelector(".header-top-search");
-        topSearchBtn.addEventListener("click", () => {
-          searchArea.style.display = "block";
-        });
-        searchCloseBtn.addEventListener("click", () => {
-          searchArea.style.display = "none";
-        });
-      </script>
+      <!-- header-sidenav -->
+      <section class="sidenav">
+        <div class="sidenav-header clearfix">
+          <div class="side-logo">
+            <a href="#logo"></a>
+          </div>
+          <button class="sidenav-close"></button>
+        </div>
+        <div class="sidenav-wrap">
+          <nav class="sidenav-gnb">
+            <ul class="sidenav-gnb-list">
+              <li>
+                <a href="#">
+                  <span> 브랜드 빌리프</span>
+                  <i class="icon-select"></i>
+                </a>
+                <ul class="sidenav-gnb-sub-list">
+                  <li>
+                    <a href="#">브랜드 빌리프</a>
+                  </li>
+                  <li>
+                    <a href="#">브랜드 캠페인</a>
+                  </li>
+                  <li>
+                    <a href="#">브랜드 엠배서더</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  <span>베스트셀러</span>
+                  <i class="icon-select"></i>
+                </a>
+                <ul class="sidenav-gnb-sub-list">
+                  <li>
+                    <a href="#">베스트셀러</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  <span>제품</span>
+                  <i class="icon-select"></i>
+                </a>
+                <ul class="sidenav-gnb-sub-list">
+                  <li>
+                    <a href="#">스킨케어</a>
+                  </li>
+                  <li>
+                    <a href="#">메이크업</a>
+                  </li>
+                  <li>
+                    <a href="#">남성</a>
+                  </li>
+                  <li>
+                    <a href="#">진설</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  <span>설화수 포스트</span>
+                  <i class="icon-select"></i>
+                </a>
+                <ul class="sidenav-gnb-sub-list">
+                  <li>
+                    <a href="#">설화수 포스트</a>
+                  </li>
+                  <li>
+                    <a href="#">명작컬렉션</a>
+                  </li>
+                  <li>
+                    <a href="#">설화수 스타일</a>
+                  </li>
+                  <li>
+                    <a href="#">설화문화전</a>
+                  </li>
+                  <li>
+                    <a href="#">설화매거진</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  <span>스파</span>
+                  <i class="icon-select"></i>
+                </a>
+                <ul class="sidenav-gnb-sub-list">
+                  <li>
+                    <a href="#">소개</a>
+                  </li>
+                  <li>
+                    <a href="#">스파 프로그램</a>
+                  </li>
+                  <li>
+                    <a href="#">예약</a>
+                  </li>
+                  <li>
+                    <a href="#">매장 찾기</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  <span>플래그십 스토어</span>
+                  <i class="icon-select"></i>
+                </a>
+                <ul class="sidenav-gnb-sub-list">
+                  <li>
+                    <a href="#">플래그십 스토어</a>
+                  </li>
+                  <li>
+                    <a href="#">설화수 북촌</a>
+                  </li>
+                  <li>
+                    <a href="#">설화수 도산</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="sidenav-footer">
+            <div class="sidenav-link">
+              <a href="#" class="login">로그인</a>
+              <a href="#" class="findstore">매장찾기</a>
+            </div>
+            <button class="sidenav-language clearfix">
+              <span>LANGUAGE</span>
+              <span>한국/한국어</span>
+            </button>
+          </div>
+        </div>
+      </section>
 
       <!-- 캐러셀 슬라이드 -->
       <section class="carousel">
@@ -293,42 +486,6 @@
             <!-- swiper control-btn -->
             <button class="slide-control"></button>
           </div>
-          <script>
-            var swipers = new Swiper(".sw-carousel", {
-              // fade 기능 구현
-              effect: "fade",
-              spaceBetween: 24,
-              slidesPerView: 1,
-              speed: 1000, //1s
-              loop: true,
-              autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-              },
-              navigation: {
-                nextEl: ".carousel .sw-next",
-                prevEl: ".carousel .sw-prev",
-              },
-              //progress bar ~> 너비랑 색깔만 다시주면 됨+위치도
-              pagination: {
-                el: ".carousel .swiper-pagination",
-                type: "progressbar",
-              },
-            });
-            let stop = document.querySelector(".slide-control");
-            let box = document.querySelector(".sw-carousel");
-            //해결
-            stop.addEventListener("click", () => {
-              box.classList.toggle("slides--stop");
-              if (box.classList.contains("slides--stop")) {
-                swipers.autoplay.stop();
-                stop.style.backgroundImage = `url("../../images/carousel_play.png")`;
-              } else {
-                swipers.autoplay.start();
-                stop.style.backgroundImage = `url("../../images/carousel_stop.png")`;
-              }
-            });
-          </script>
         </div>
       </section>
 
@@ -431,48 +588,13 @@
             <!-- swiper control-btn -->
             <button class="sw-stop"></button>
           </div>
-          <!-- Initialize Swiper -->
-          <script>
-            var swiper = new Swiper(".sw-recommend", {
-              slidesPerView: 3,
-              slidesPerGroup: 3, // 한번에 슬라이드할 아이템 개수
-              spaceBetween: 24,
-              speed: 1000, //1s
-              loop: true,
-              autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-              },
-              navigation: {
-                nextEl: ".recommend .sw-next",
-                prevEl: ".recommend .sw-prev",
-              },
-              //progress bar
-              pagination: {
-                el: ".recommend .swiper-pagination",
-                type: "progressbar",
-              },
-            });
-            // stop & play 버튼
-            let stopBtn = document.querySelector(".sw-stop");
-            let container = document.querySelector(".sw-recommend");
-            stopBtn.addEventListener("click", () => {
-              container.classList.toggle("slide--stop");
-              if (container.classList.contains("slide--stop")) {
-                swiper.autoplay.stop();
-                stopBtn.style.backgroundImage = `url("../../images/play.png")`;
-              } else {
-                swiper.autoplay.start();
-                stopBtn.style.backgroundImage = `url("../../images/stop.png")`;
-              }
-            });
-          </script>
         </div>
       </section>
 
       <!-- 베스트 셀러 -->
       <section class="best-seller">
         <div class="inner">
+
           <a href="#" class="best-link">
             <img src="images/best_seller1.jpg" alt="베스트셀러" />
             <div class="best-info">
@@ -486,6 +608,7 @@
           </a>
         </div>
       </section>
+      
       <!-- 설화수 시즌추천 -->
       <section class="season">
         <div class="inner">
@@ -710,7 +833,103 @@
       </section>
 
       <!-- 하단 -->
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="footer-wrap">
+          <div class="footer-info">
+            <a href="###">회사소개</a>
+            <a href="###">서비스이용약관</a>
+            <a href="###">UGC이용약관</a>
+            <a href="###"><strong>개인정보처리방침</strong></a>
+            <a href="###">영상정보처리방침</a>
+            <a href="###">사이트맵</a>
+            <a href="###">로그인</a>
+          </div>
+          <div class="footer-sns">
+            <a href="##" class="footer-mark">
+              <img
+                src="./images/footer_web-accessibility-certification-mark_kr_230203.png"
+                width="42"
+                alt="(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 (WA인증마크)"
+              />
+            </a>
+            <a href="#sns">
+              <img src="./images/footer_facebookLogo.png" alt="페이스북" />
+            </a>
+            <a href="#sns">
+              <img src="./images/footer_instaLogo.png" alt="인스타" />
+            </a>
+            <a href="#sns">
+              <img src="./images/footer_youtubeLogo.png" alt="유튜브" />
+            </a>
+            <a href="#sns">
+              <img src="./images/footer_kakaoChannelLogo.png" alt="카카오톡" />
+            </a>
+          </div>
+          <div class="footer-counseling">
+            <span>고객서비스센터(수신자요금부담) : 080-023-5454</span>
+            <span>(월~금: AM 09:00~PM 06:00)</span>
+          </div>
+          <div class="footer-copyright">
+            <span
+              >© <strong>AMOREPACIFIC</strong> CORPORATION. All rights
+              reserved.</span
+            >
+          </div>
+        </div>
+        <div class="footer-mobile">
+          <div class="footer-sns-mo">
+            <div class="footer-sns-mo-wrap">
+              <a href="#sns">
+                <img src="./images/footer_facebookLogo.png" alt="페이스북" />
+              </a>
+              <a href="#sns">
+                <img src="./images/footer_instaLogo.png" alt="인스타" />
+              </a>
+              <a href="#sns">
+                <img src="./images/footer_youtubeLogo.png" alt="유튜브" />
+              </a>
+              <a href="#sns">
+                <img
+                  src="./images/footer_kakaoChannelLogo.png"
+                  alt="카카오톡"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="footer-bottom-mo">
+            <button class="footer-copy-mo">
+              <span
+                >© <strong>AMOREPACIFIC</strong> CORPORATION. All rights
+                reserved.</span
+              >
+            </button>
+            <div class="footer-mo-wrap">
+              <div class="footer-info-mo">
+                <a href="###">회사소개</a>
+                <a href="###">서비스이용약관</a>
+                <a href="###">UGC이용약관</a>
+                <a href="###"><strong>개인정보처리방침</strong></a>
+                <a href="###">영상정보처리방침</a>
+                <a href="###">사이트맵</a>
+              </div>
+              <div class="footer-counsel-mo">
+                <span>고객서비스센터(수신자요금부담) : 080-023-5454</span>
+                <span>(월~금: AM 09:00~PM 06:00)</span>
+              </div>
+              <a href="##" class="footer-mark-mo">
+                <img
+                  src="./images/footer_web-accessibility-certification-mark_kr_230203.png"
+                  width="42"
+                  alt="(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 (WA인증마크)"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
+    <script src="./js/header.js"></script>
+    <script src="./js/swipercontrol.js"></script>
+    <script src="./js/footer.js"></script>
   </body>
 </html>

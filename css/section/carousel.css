@@ -11,9 +11,12 @@
   height: auto;
 }
 .carousel .sw-btn {
-  width: 68px;
-  height: 68px;
-  background-image: url("/images/carousel_btn.png");
+  background-image: url("../../images/carousel_btn.png");
+}
+@media screen and (max-width: 720px) {
+  .carousel .sw-btn {
+    display: none;
+  }
 }
 .carousel .swiper-slide a {
   display: block;
@@ -40,7 +43,20 @@
   word-spacing: 0.5px;
 }
 .slide-info .inner {
-  padding-bottom: 8%;
+  padding-bottom: 7.7%;
+}
+.slide-info p:first-child {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 13px;
+  letter-spacing: -0.45px;
+  text-shadow: 1px 1px 6px #666;
+}
+.slide-info p:last-child {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.9px;
+  text-shadow: 1px 1px 6px #666;
 }
 @media screen and (max-width: 1660px) {
   .slide-info .inner {
@@ -48,18 +64,43 @@
     padding-bottom: 9%;
   }
 }
-.slide-info p:first-child {
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 10px;
-  letter-spacing: -0.45px;
+@media screen and (max-width: 1024px) {
+  .slide-info .inner {
+    padding-left: 7.2%;
+    padding-bottom: 9.5%;
+  }
+  .slide-info p:first-child {
+    font-size: 14px;
+  }
+  .slide-info p:last-child {
+    font-size: 28px;
+  }
 }
-.slide-info p:last-child {
-  font-size: 36px;
-  font-weight: 700;
-  letter-spacing: -0.9px;
+@media screen and (max-width: 720px) {
+  .carousel .slide-info {
+    position: absolute;
+    top: 0;
+    margin-top: 36%; /* 얘 다시 재야될 듯 */
+    text-align: center;
+  }
+  .slide-info .inner {
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+  .slide-info p:first-child {
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .slide-info p:last-child {
+    font-size: 24px;
+    line-height: 1.3;
+  }
 }
-
+@media screen and (max-width: 540px) {
+  .carousel .slide-info {
+    margin-top: 32.8%; /* 얘 다시 재야될 듯 */
+  }
+}
 .carousel .pagination-container {
   display: flex;
   align-items: center;
@@ -93,5 +134,33 @@
 @media screen and (max-width: 1660px) {
   .carousel .pagination-container {
     padding-left: 130px;
+    margin-bottom: 4.6%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel .pagination-container .swiper-pagination {
+    width: 300px;
+    height: 3px;
+  }
+  .carousel .pagination-container .slide-control {
+    width: 6px;
+    height: 8px;
+  }
+  .carousel .pagination-container {
+    padding-left: 7.2%;
+    margin-bottom: 5.4%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .carousel .pagination-container {
+    margin-bottom: 6.9%;
+  }
+  .carousel .pagination-container .swiper-pagination {
+    width: 90%;
+  }
+  .carousel .pagination-container .slide-control {
+    width: 8px;
+    height: 10px;
   }
 }

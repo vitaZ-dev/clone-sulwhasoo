@@ -1,24 +1,24 @@
-.recommend .section-title {
-  font-weight: 700;
-  font-size: 28px;
-  letter-spacing: -0.7px;
-  padding-bottom: 20px;
-  line-height: 1.5;
-  /* 공통클래스로 빼둔 부분이니까 나중에 브랜치 합칠 때 지우면 됨 
-	    근데 line-height는 다시 줘야될듯 */
-}
 .recommend .section-slide {
   position: relative;
 }
 
 .recommend .sw-btn {
-  width: 68px;
-  height: 68px;
-  background-image: url("/images/carousel_btn.png");
-  transform: translateY(-100%);
+  background-image: url("../../images/carousel_btn.png");
+  transform: translateY(-125%);
+}
+@media screen and (max-width: 1024px) {
+  .recommend .sw-btn {
+    background-image: url("../../images/recommend_btn.png");
+  }
+}
+@media screen and (max-width: 720px) {
+  .recommend .sw-btn {
+    width: 35px;
+    height: 35px;
+  }
 }
 .recommend .sw-prev {
-  transform: translateY(-100%) rotate(180deg);
+  transform: translateY(-125%) rotate(180deg);
 }
 
 .sw-recommend .swiper-slide {
@@ -47,10 +47,38 @@
   color: #888;
   padding: 2px 0 14px;
 }
-.good-info-price {
+.goods-info-price {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.4px;
+}
+@media screen and (max-width: 1024px) {
+  .goods-info {
+    margin-top: 16px;
+  }
+  .goods-info-title {
+    font-size: 16px;
+  }
+  .goods-info-desc {
+    font-size: 12px;
+    padding: 0 0 11px;
+  }
+  .goods-info-price {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .goods-info {
+    margin-top: 23px;
+  }
+  .goods-info-desc {
+    font-size: 13px;
+    padding: 2px 0 10px;
+    letter-spacing: -0.325px;
+  }
+  .goods-info-price {
+    font-size: 13px;
+  }
 }
 /* progress */
 .recommend .pagination-wrapper {
@@ -77,4 +105,27 @@
 }
 .recommend .pagination-wrapper .swiper-pagination-progressbar-fill {
   background: #000;
+}
+@media screen and (max-width: 1024px) {
+  .recommend .pagination-wrapper {
+    margin-top: 30px;
+  }
+  .recommend .pagination-wrapper .swiper-pagination {
+    width: 300px;
+    height: 3px;
+  }
+  .recommend .pagination-wrapper .sw-stop {
+    width: 6px;
+    height: 7px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .recommend .pagination-wrapper .swiper-pagination {
+    width: 100%;
+    height: 3px;
+  }
+  .recommend .pagination-wrapper .sw-stop {
+    width: 8px;
+    height: 10px;
+  }
 }
