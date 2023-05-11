@@ -11,7 +11,6 @@ langBtn.addEventListener("click", () => {
 // nav 보이기
 let gnbWrap = document.querySelector(".gnb");
 let gnbBg = document.querySelector(".gnb-sub-list-bg");
-let gnbList = document.querySelector(".gnb-list");
 let gnbItems = document.querySelectorAll(".gnb-list > li");
 gnbItems.forEach((item) => {
   item.addEventListener("mouseenter", () => {
@@ -34,17 +33,34 @@ let dimArea = document.querySelector(".dim");
 let topSearchBtn = document.querySelector(".search-btn");
 let searchCloseBtn = document.querySelector(".search-close-btn");
 let searchArea = document.querySelector(".header-top-search");
+let gnbNav = document.querySelector(".gnb");
 topSearchBtn.addEventListener("click", () => {
-  searchArea.style.display = "block";
+  // searchArea.style.display = "block";
+  searchArea.classList.add("header-top-search-active");
   dimArea.style.display = "block";
   //스크롤 금지
-  document.body.style.overflow = "hidden";
+  // document.body.style.overflow = "hidden";
+  $body.classList.add("body-hide");
+
+  gnbNav.classList.add("gnb-hide");
 });
 searchCloseBtn.addEventListener("click", () => {
-  searchArea.style.display = "none";
+  // searchArea.style.display = "none";
+  searchArea.classList.remove("header-top-search-active");
   dimArea.style.display = "none";
   // 다시 스크롤
-  document.body.style.overflow = "unset";
+  // document.body.style.overflow = "unset";
+  $body.classList.remove("body-hide");
+
+  gnbNav.classList.remove("gnb-hide");
+});
+// 검색폼 사라지는 컨셉 변경
+const $header = document.querySelector(".header");
+$header.addEventListener("mouseleave", () => {
+  searchArea.classList.remove("header-top-search-active");
+  dimArea.style.display = "none";
+  $body.classList.remove("body-hide");
+  gnbNav.classList.remove("gnb-hide");
 });
 
 // side navigation
@@ -74,32 +90,19 @@ const menuItems = document.querySelectorAll(".sidenav-gnb-list > li > a");
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {
     const submenu = item.nextElementSibling;
-    if (submenu.classList.contains("active")) {
-      submenu.classList.remove("active");
+    if (submenu.classList.contains("is--active")) {
+      submenu.classList.remove("is--active");
     } else {
-      const activeMenu = document.querySelector(".sidenav-gnb-sub-list.active");
+      const activeMenu = document.querySelector(
+        ".sidenav-gnb-sub-list.is--active"
+      );
       if (activeMenu) {
-        activeMenu.classList.remove("active");
+        activeMenu.classList.remove("is--active");
       }
-      submenu.classList.add("active");
+      submenu.classList.add("is--active");
     }
   });
 });
-// const menuLiItems = document.querySelectorAll(".sidenav-gnb-list > li");
-// menuLiItems.forEach((items) => {
-//   items.addEventListener("click", () => {
-//     let submenu = items.querySelector(".sidenav-gnb-sub-list");
-//     if (items.classList.contains("active")) {
-//       items.classList.remove("active");
-//     } else {
-//       const activeMenu = document.querySelector(".sidenav-gnb-sub-list.active");
-//       if (activeMenu) {
-//         activeMenu.classList.remove("active");
-//       }
-//       items.classList.add("active");
-//     }
-//   });
-// });
 
 // sidenav - 선택 시 + 모양 아이콘 애니메이션
 const menuSelected = document.querySelectorAll(".sidenav-gnb-list > li > a");
