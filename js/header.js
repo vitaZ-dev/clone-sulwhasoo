@@ -11,7 +11,6 @@ langBtn.addEventListener("click", () => {
 // nav 보이기
 let gnbWrap = document.querySelector(".gnb");
 let gnbBg = document.querySelector(".gnb-sub-list-bg");
-let gnbList = document.querySelector(".gnb-list");
 let gnbItems = document.querySelectorAll(".gnb-list > li");
 gnbItems.forEach((item) => {
   item.addEventListener("mouseenter", () => {
