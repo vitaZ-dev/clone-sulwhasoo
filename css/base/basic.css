@@ -69,6 +69,7 @@ button {
   }
 }
 .section-title {
+  font-family: "Theinhardt", "Noto Sans KR", sans-serif;
   font-weight: 700;
   font-size: 28px;
   margin-bottom: 20px;

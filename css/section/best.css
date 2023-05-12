@@ -1,7 +1,14 @@
 .best-link {
   position: relative;
   display: block;
-  height: 540px;
+  height: 28.125vw;
+}
+.best-link img {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .best-info {
   position: absolute;
@@ -16,6 +23,7 @@
 
   color: #222;
   font-size: 32px;
+  text-size-adjust: auto;
   font-weight: 600;
 }
 
@@ -24,6 +32,7 @@
   line-height: 1.5;
   color: #666;
   font-size: 18px;
+  text-size-adjust: auto;
 }
 
 .best-btn {
@@ -34,6 +43,7 @@
   border: 1px solid #222;
 
   font-size: 14px;
+  text-size-adjust: auto;
   display: inline-block;
   margin-top: 30px;
   box-sizing: border-box;
@@ -47,4 +57,20 @@
   background: rgb(255, 104, 3);
   color: #fff;
   border: #fff;
+}
+@media (max-width: 1040px) {
+  .best-link {
+    display: block;
+    height: 35.769vw;
+    max-height: 372px;
+    overflow: hidden;
+  }
+}
+@media (max-width: 720px) {
+  .best-link {
+    display: block;
+    height: 111.944vw;
+    max-height: 806px;
+    overflow: hidden;
+  }
 }

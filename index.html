@@ -614,9 +614,18 @@
       <!-- 베스트 셀러 -->
       <section class="best-seller">
         <div class="inner">
-
           <a href="#" class="best-link">
-            <img src="images/best_seller1.jpg" alt="베스트셀러" />
+            <picture>
+              <source
+                srcset="./images/best_seller3_720.jpg"
+                media="(max-width: 720px)"
+              />
+              <source
+                srcset="./images/best_seller1040.jpg"
+                media="(max-width: 1040px)"
+              />
+              <img src="images/best_seller.jpg" alt="베스트셀러" />
+            </picture>
             <div class="best-info">
               <h2 class="best-title">베스트 셀러</h2>
               <p class="best-desc">
@@ -628,11 +637,11 @@
           </a>
         </div>
       </section>
-      
+
       <!-- 설화수 시즌추천 -->
       <section class="season">
         <div class="inner">
-          <h2 class="title">설화수 시즌추천</h2>
+          <h2 class="section-title">설화수 시즌추천</h2>
           <div class="season-link">
             <a href="#" class="serum">
               <img src="images/season1_480.png" alt="시즌자음생세럼" />
@@ -671,19 +680,25 @@
       <!-- 설화수 서비스 -->
       <section class="service">
         <div class="inner">
-          <div class="package">
-            <a href="#" class="package-info">
-              <img src="images/service1.jpg" alt="포장서비스" />
-              <h2 class="service-title">마이 지함보 포장서비스</h2>
-              <button class="sercice-btn">자세히 보기</button>
-            </a>
-          </div>
-          <div class="store">
-            <a href="#" class="store-info">
-              <img src="images/service2.jpg" alt="북촌스토어" />
-              <h2 class="service-title">설화수 북촌 플래그십 스토어</h2>
-              <button class="sercice-btn">자세히 보기</button>
-            </a>
+          <div class="service-wrap">
+            <div class="service-package">
+              <a href="#" class="service-info">
+                <div class="service-img">
+                  <img src="images/service1.jpg" alt="포장서비스" />
+                </div>
+                <h2 class="service-title">마이 지함보 포장서비스</h2>
+                <button class="sercice-btn">자세히 보기</button>
+              </a>
+            </div>
+            <div class="service-package">
+              <a href="#" class="service-info">
+                <div class="service-img">
+                  <img src="images/service2.jpg" alt="북촌스토어" />
+                </div>
+                <h2 class="service-title">설화수 북촌 플래그십 스토어</h2>
+                <button class="sercice-btn">자세히 보기</button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -691,7 +706,7 @@
       <!-- 설화수 sns mgbox-->
       <section class="sns">
         <div class="inner">
-          <h2 class="sns-title">#With Sulwhasoo</h2>
+          <h2 class="section-title">#With Sulwhasoo</h2>
           <div class="sns-slide">
             <button class="sw-btn sw-prev">이전</button>
             <button class="sw-btn sw-next">다음</button>
