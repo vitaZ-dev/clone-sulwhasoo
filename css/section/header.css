@@ -504,15 +504,11 @@ section.sidenav-active {
 }
 .sidenav-gnb-list > li {
   position: relative;
-  background: #fff;
   /* 
   height: 58.5px;
   overflow: hidden;
 
   transition: height 0.3s; */
-}
-.sidenav-gnb-list > li.show > a {
-  font-weight: 700;
 }
 .sidenav-gnb-list li a {
   position: relative;
@@ -524,6 +520,12 @@ section.sidenav-active {
   color: #333;
   font-size: 23px;
   line-height: 1.5;
+}
+.sidenav-gnb-list > li > a {
+  background: #fff;
+}
+.sidenav-gnb-list > li.show > a {
+  font-weight: 700;
 }
 /* 애니메이션 진행 중 */
 .sidenav-gnb-sub-list {

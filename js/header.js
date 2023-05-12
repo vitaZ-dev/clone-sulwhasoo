@@ -75,16 +75,16 @@ sideNavBtn.addEventListener("click", function () {
   sideNavArea.classList.add("sidenav-active");
 
   //스크롤 금지
-  $body.classList.add("body-hide");
-  // document.body.style.overflow = "hidden";
+  // $body.classList.add("body-hide");
+  document.body.style.overflow = "hidden";
 });
 sideNavClose.addEventListener("click", function () {
   // sideNavArea.style.display = "none";
   sideNavArea.classList.remove("sidenav-active");
 
   // 다시 스크롤
-  $body.classList.remove("body-hide");
-  // document.body.style.overflow = "unset";
+  // $body.classList.remove("body-hide");
+  document.body.style.overflow = "unset";
 });
 
 // sidenav - li 선택 시 sublist 애니메이션
@@ -168,7 +168,15 @@ menuItems.forEach((item) => {
 //     }
 //   });
 // });
-
+// sidenav - 선택 시 + 모양 아이콘 애니메이션
+const menuSelected = document.querySelectorAll(".sidenav-gnb-list > li > a");
+menuSelected.forEach((select) => {
+  select.addEventListener("click", () => {
+    let icon = select.querySelector(".icon-select");
+    icon.classList.toggle("icon-checked");
+  });
+});
+//
 const sidenavList = document.querySelectorAll(".sidenav-gnb-list > li");
 sidenavList.forEach((item) => {
   item.addEventListener("click", (event) => {
@@ -176,6 +184,7 @@ sidenavList.forEach((item) => {
     const previousSelected = document.querySelector(
       ".sidenav-gnb-list > li.show"
     );
+    console.log(event.currentTarget);
     // 클릭한 요소에 show 클래스 추가
     event.currentTarget.classList.add("show");
     // 이전에 선택된 요소에서 show 클래스 제거
