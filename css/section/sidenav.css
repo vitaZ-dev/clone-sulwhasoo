@@ -1,5 +1,3 @@
-
-
 /* 1024px 이하에서 보이는 sidenav */
 section.sidenav {
   display: block;
@@ -65,11 +63,11 @@ section.sidenav-active {
 }
 .sidenav-gnb-list > li {
   position: relative;
-  /* 
+
   height: 58.5px;
   overflow: hidden;
 
-  transition: height 0.3s; */
+  transition: height 0.3s;
 }
 .sidenav-gnb-list li a {
   position: relative;
@@ -85,6 +83,10 @@ section.sidenav-active {
 .sidenav-gnb-list > li > a {
   background: #fff;
 }
+.sidenav-gnb-list > li.show {
+  height: fit-content;
+  transition: height 0.5s;
+}
 .sidenav-gnb-list > li.show > a {
   font-weight: 700;
 }
@@ -92,6 +94,9 @@ section.sidenav-active {
 .sidenav-gnb-sub-list {
   display: none;
   background: #faf9f5;
+  /* visibility: hidden;
+  height: 0;
+  transition: all 0.5s; */
   /* 	
   height: 0;
   overflow: hidden;
@@ -100,7 +105,8 @@ section.sidenav-active {
 }
 .sidenav-gnb-sub-list.is--active {
   display: block;
-  /* height: fit-content; */
+  /* visibility: visible;
+  height: fit-content; */
 }
 
 .sidenav-gnb-sub-list li:first-child {
