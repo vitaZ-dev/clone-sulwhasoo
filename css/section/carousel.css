@@ -51,12 +51,31 @@
   margin-bottom: 13px;
   letter-spacing: -0.45px;
   text-shadow: 1px 1px 6px #666;
+  animation: text-animation 1.3s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation-delay: 0.3s;
 }
 .slide-info p:last-child {
   font-size: 36px;
   font-weight: 700;
   letter-spacing: -0.9px;
   text-shadow: 1px 1px 6px #666;
+  animation: text-animation 1.3s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation-delay: 0.3s;
+}
+.sw-carousel .swiper-slide-visible > .slide-info p:first-child,
+.sw-carousel .swiper-slide-visible > .slide-info p:last-child {
+  animation: text-animation 1.3s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation-delay: 0.3s;
+}
+@keyframes text-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @media screen and (max-width: 1660px) {
   .slide-info .inner {
