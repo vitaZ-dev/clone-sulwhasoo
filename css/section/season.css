@@ -1,20 +1,14 @@
-.title {
-  font-family: "Theinhardt", "Noto Sans KR", sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: -0.7px;
-  line-height: 30px;
-  padding-bottom: 20px;
-}
 .season-link {
   display: flex;
   justify-content: space-between;
 }
 .serum {
   display: block;
-  width: 342px;
-  height: 522px;
+  width: 23.75%;
+  height: 36.25vw;
   background: #ededed;
+  max-height: 522px;
+  overflow: hidden;
 }
 .season-link > a > img {
   width: 100%;
@@ -45,8 +39,10 @@
 }
 .duo {
   position: relative;
-  width: 708px;
-  height: 522px;
+  width: 49.16%;
+  height: 36.25vw;
+  max-height: 522px;
+  overflow: hidden;
 }
 .duo img {
   width: 100%;
@@ -72,13 +68,47 @@
   color: #666;
   padding-top: 7px;
 }
-
 .cream {
-  width: 342px;
-  height: 522px;
+  position: relative;
+  width: 23.75%;
+  height: 36.25vw;
+  max-height: 522px;
   background: #ededed;
+  overflow: hidden;
 }
 .info-cream {
-  margin-top: 40px;
+  position: absolute;
+  bottom: 55px;
+  left: 0;
+  width: 100%;
   text-align: center;
+}
+@media (max-width: 1024px) {
+  .season .inner {
+    margin-top: 85px !important;
+  }
+}
+@media (max-width: 720px) {
+  .season .inner {
+    margin-top: 70px !important;
+  }
+  .season-link {
+    flex-wrap: wrap;
+  }
+  .serum {
+    width: calc(50% - 5px);
+    height: 68.627vw;
+    order: 1;
+  }
+  .duo {
+    width: 100%;
+    height: 88.235vw;
+    order: 0;
+    margin-bottom: 10px;
+  }
+  .cream {
+    width: calc(50% - 5px);
+    height: 68.627vw;
+    order: 2;
+  }
 }
