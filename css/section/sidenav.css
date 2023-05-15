@@ -63,16 +63,11 @@ section.sidenav-active {
 }
 .sidenav-gnb-list > li {
   position: relative;
-
-  height: 58.5px;
-  overflow: hidden;
-
-  transition: height 0.3s;
 }
 .sidenav-gnb-list li a {
   position: relative;
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   font-weight: 500;
   display: block;
   padding: 12px 0 12px 20px;
@@ -83,32 +78,18 @@ section.sidenav-active {
 .sidenav-gnb-list > li > a {
   background: #fff;
 }
-.sidenav-gnb-list > li.show {
-  height: fit-content;
-  transition: height 0.5s;
-}
-.sidenav-gnb-list > li.show > a {
+.sidenav-gnb-list > li > a.li-active {
   font-weight: 700;
 }
-/* 애니메이션 진행 중 */
-.sidenav-gnb-sub-list {
-  display: none;
+/* sub - hidden area */
+.sidenav-gnb-list > li > .sidenav-gnb-sub-list {
+  position: relative;
+  display: block;
   background: #faf9f5;
-  /* visibility: hidden;
-  height: 0;
-  transition: all 0.5s; */
-  /* 	
   height: 0;
   overflow: hidden;
-
-  transition: height 0.5s; */
+  transition: height 0.3s ease-in-out;
 }
-.sidenav-gnb-sub-list.is--active {
-  display: block;
-  /* visibility: visible;
-  height: fit-content; */
-}
-
 .sidenav-gnb-sub-list li:first-child {
   padding-top: 10px;
 }
@@ -118,6 +99,29 @@ section.sidenav-active {
 .sidenav-gnb-sub-list li a {
   font-size: 16px;
   padding: 5px 0 5px 44px;
+}
+.sidenav-gnb-list > li > a.li-active + #sub-brand {
+  height: 131px;
+}
+.sidenav-gnb-list > li > a.li-active + #sub-best {
+  height: 50px;
+}
+.sidenav-gnb-list > li > a.li-active + #sub-goods {
+  height: 166px;
+}
+.sidenav-gnb-list > li > a.li-active + #sub-post {
+  height: 201px;
+}
+.sidenav-gnb-list > li > a.li-active + #sub-spa {
+  height: 166px;
+}
+.sidenav-gnb-list > li > a.li-active + #sub-store {
+  height: 131px;
+}
+.sidenav-gnb-list > li > .sidenav-gnb-sub-list.show-area {
+  position: relative;
+  z-index: 0;
+  visibility: visible;
 }
 
 .icon-select {

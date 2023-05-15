@@ -79,58 +79,39 @@ sideNavClose.addEventListener("click", function () {
 });
 
 // sidenav - li 선택 시 sublist 보이기
-const sideNavGnbList = document.querySelectorAll(".sidenav-gnb-list>li");
-sideNavGnbList.forEach((item) => {
-  item.addEventListener("click", () => {
-    const submenu = item.children[1];
-    if (submenu.classList.contains("is--active")) {
-      submenu.classList.remove("is--active");
-    } else {
-      const activeMenu = document.querySelector(
-        ".sidenav-gnb-sub-list.is--active"
-      );
-      if (activeMenu) {
-        activeMenu.classList.remove("is--active");
-      }
-      submenu.classList.add("is--active");
-    }
-  });
-});
-// sidenav li 선택 시 + 아이콘
-sideNavGnbList.forEach((icon) => {
-  icon.addEventListener("click", function () {
-    const iconChecked = this.querySelector(".icon-checked");
-    // 다른 요소에서 icon-checked 클래스 제거
-    const activeIcon = document.querySelector(".icon-checked");
-    if (activeIcon) {
-      activeIcon.classList.remove("icon-checked");
-    }
-    // 클릭한 요소의 icon-checked 클래스 추가/제거
-    if (iconChecked) {
-      iconChecked.classList.remove("icon-checked");
-    } else {
-      this.querySelector("a>i").classList.add("icon-checked");
-    }
-  });
-});
-// sidenav li 선택 시 fontWeight
-sideNavGnbList.forEach((item) => {
-  item.addEventListener("click", (event) => {
-    // 이전에 선택된 요소 찾기
-    const previousSelected = document.querySelector(
-      ".sidenav-gnb-list > li.show"
-    );
-    // 클릭한 요소에 show 클래스 추가
-    event.currentTarget.classList.add("show");
+const sideGnbBtn = document.querySelectorAll(".sidenav-gnb-list > li > a"); //li>a
+const sideGnbSubList = document.querySelectorAll(".sidenav-gnb-sub-list"); //숨겨진 영역
+const selectIcon = document.querySelectorAll(".icon-select"); //+아이콘
 
-    // 이전에 선택된 요소에서 show 클래스 제거
-    if (previousSelected) {
-      previousSelected.classList.remove("show");
-    }
-
-    // 같은 요소를 두 번 클릭한 경우 show 클래스 제거
-    if (previousSelected === event.currentTarget) {
-      event.currentTarget.classList.remove("show");
+sideGnbBtn.forEach((li) => {
+  li.addEventListener("click", (item) => {
+    let target = item.currentTarget;
+    let targetGnbSubArea = item.currentTarget.nextElementSibling;
+    let targetSelectIcon = item.currentTarget.children[1];
+    console.log(target); // li>a = Btn
+    console.log(targetGnbSubArea); //nav-gnb-sub-list
+    console.log(targetSelectIcon); //+icon-select
+    if (targetGnbSubArea.classList.contains("show-area")) {
+      target.classList.remove("li-active");
+      targetGnbSubArea.classList.remove("show-area");
+      targetSelectIcon.classList.remove("icon-checked");
+    } else {
+      sideGnbBtn.forEach((li) => {
+        //li 버튼 이벤트 제거
+        li.classList.remove("li-active");
+        //nav-gnb-sub-list 영역 숨기기
+        sideGnbSubList.forEach((sub) => {
+          sub.classList.remove("show-area");
+        });
+        //아이콘
+        selectIcon.forEach((icon) => {
+          icon.classList.remove("icon-checked");
+        });
+        //그리고 클래스 추가
+        target.classList.add("li-active"); //li>a
+        targetGnbSubArea.classList.add("show-area"); //nav-sub-gnb-list
+        targetSelectIcon.classList.add("icon-checked"); //icon
+      });
     }
   });
 });
