@@ -285,10 +285,11 @@
   visibility: visible;
   opacity: 1;
 }
-
-/* #gnb-belief {
-  left: 0; 
-} */
+@media screen and (max-width: 1024px) {
+  .gnb-sub-list-bg {
+    display: none;
+  }
+}
 #gnb-goods {
   left: -40px;
 }
