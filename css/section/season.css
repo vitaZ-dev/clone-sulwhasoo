@@ -14,8 +14,8 @@
   width: 100%;
   padding: 11px;
 }
-.info-serum {
-  margin-top: 40px;
+.season-info {
+  margin-top: 13%;
   text-align: center;
 }
 .season-title {
@@ -30,6 +30,10 @@
   color: #888;
   letter-spacing: -0.4px;
   padding-bottom: 15px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .season-cost {
   font-size: 16px;
@@ -52,7 +56,7 @@
 .info-duo {
   position: absolute;
   bottom: 0;
-  margin-bottom: 48px;
+  margin-bottom: 6%;
   margin-left: 62px;
   line-height: 27px;
 }
@@ -76,22 +80,43 @@
   background: #ededed;
   overflow: hidden;
 }
-.info-cream {
-  position: absolute;
-  bottom: 55px;
-  left: 0;
-  width: 100%;
-  text-align: center;
+@media (max-width: 1150px) {
+  .info-duo {
+    margin-left: 10%;
+  }
+  .duo-title {
+    font-size: 17px;
+  }
+  .duo-desc {
+    font-size: 15px;
+    line-height: 1.5;
+  }
 }
 @media (max-width: 1024px) {
-  .season .inner {
-    margin-top: 85px !important;
+ 
+  .season-title {
+    font-size: 16px;
+  }
+  .season-desc {
+    font-size: 12px;
+  }
+  .season-cost {
+    font-size: 12px;
   }
 }
-@media (max-width: 720px) {
-  .season .inner {
-    margin-top: 70px !important;
+@media (max-width: 980px) {
+  .info-duo {
+    margin-left: 7%;
   }
+  .duo-title {
+    font-size: 14px;
+  }
+  .duo-desc {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 720px) {
   .season-link {
     flex-wrap: wrap;
   }
@@ -105,6 +130,16 @@
     height: 88.235vw;
     order: 0;
     margin-bottom: 10px;
+  }
+  .info-duo {
+    bottom: 2%;
+  }
+  .duo-title {
+    font-size: 20px;
+  }
+  .duo-desc {
+    font-size: 15px;
+    line-height: 1.5;
   }
   .cream {
     width: calc(50% - 5px);
