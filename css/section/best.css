@@ -4,7 +4,7 @@
   height: 28.125vw;
 }
 .best-link img {
-  position: absolute;
+  position: relative;
   width: 100%;
   left: 50%;
   top: 50%;

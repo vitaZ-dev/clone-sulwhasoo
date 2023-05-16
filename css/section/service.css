@@ -1,3 +1,6 @@
+.service .inner {
+  padding-top: 45px;
+}
 .service-wrap {
   display: flex;
   justify-content: space-around;
@@ -44,7 +47,16 @@
   color: #fff;
   border: #fff;
 }
-
+@media (max-width: 1024px) {
+  .service-title {
+    font-size: 20px;
+    margin: 16px 0 10px 0;
+  }
+  .sercice-btn {
+    font-size: 10px;
+    padding: 5.6375px 21.155px;
+  }
+}
 @media (max-width: 720px) {
   .service-wrap {
     flex-wrap: wrap;
@@ -57,5 +69,14 @@
 
   .service-img {
     height: 84.313vw;
+  }
+  .service-title {
+    font-size: 22px;
+    margin: 22px 0 10px 0;
+  }
+  .sercice-btn {
+    font-size: 11px;
+    padding: 6px 20px;
+    border: 1px solid #666;
   }
 }
