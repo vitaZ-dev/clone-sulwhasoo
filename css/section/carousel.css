@@ -144,6 +144,9 @@
   background-size: contain;
   margin-left: 13px;
 }
+.carousel-slide-play {
+  background-image: url("../../images/carousel_play.png") !important;
+}
 .carousel .pagination-container .swiper-pagination-progressbar-fill {
   background: #fff;
 }

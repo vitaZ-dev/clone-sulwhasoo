@@ -70,10 +70,10 @@ function makeCarouselSlide() {
     box.classList.toggle("slides--stop");
     if (box.classList.contains("slides--stop")) {
       carouselSwiper.autoplay.stop();
-      stop.style.backgroundImage = `url("../../images/carousel_play.png")`;
+      stop.classList.add("carousel-slide-play");
     } else {
       carouselSwiper.autoplay.start();
-      stop.style.backgroundImage = `url("../../images/carousel_stop.png")`;
+      stop.classList.remove("carousel-slide-play");
     }
   });
 }

@@ -108,6 +108,9 @@
   opacity: 0.5;
   margin-left: 12px;
 }
+.recommend-slide-play {
+  background-image: url("../../images/play.png") !important;
+}
 .recommend .pagination-wrapper .swiper-pagination-progressbar-fill {
   background: #000;
 }

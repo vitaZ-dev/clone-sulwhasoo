@@ -69,10 +69,10 @@ function makeRecommendSlide() {
     container.classList.toggle("slide--stop");
     if (container.classList.contains("slide--stop")) {
       recommendSwiper.autoplay.stop();
-      stopBtn.style.backgroundImage = `url("../../images/play.png")`;
+      stopBtn.classList.add("recommend-slide-play");
     } else {
       recommendSwiper.autoplay.start();
-      stopBtn.style.backgroundImage = `url("../../images/stop.png")`;
+      stopBtn.classList.remove("recommend-slide-play");
     }
   });
 }
