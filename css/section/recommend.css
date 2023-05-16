@@ -1,3 +1,8 @@
+@media (max-width: 720px) {
+  .wrap > section.recommend {
+    margin-top: 35px;
+  }
+}
 .recommend .section-slide {
   position: relative;
 }
