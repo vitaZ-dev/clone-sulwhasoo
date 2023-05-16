@@ -1,39 +1,3 @@
-// carousel slide
-let carouselSwiper = new Swiper(".sw-carousel", {
-  // fade 기능 구현
-  effect: "fade",
-  spaceBetween: 24,
-  slidesPerView: 1,
-  speed: 1000, //1s
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: ".carousel .sw-next",
-    prevEl: ".carousel .sw-prev",
-  },
-  //progress bar ~> 너비랑 색깔만 다시주면 됨+위치도
-  pagination: {
-    el: ".carousel .swiper-pagination",
-    type: "progressbar",
-  },
-});
-let stop = document.querySelector(".slide-control");
-let box = document.querySelector(".sw-carousel");
-//해결
-stop.addEventListener("click", () => {
-  box.classList.toggle("slides--stop");
-  if (box.classList.contains("slides--stop")) {
-    carouselSwiper.autoplay.stop();
-    stop.style.backgroundImage = `url("../../images/carousel_play.png")`;
-  } else {
-    carouselSwiper.autoplay.start();
-    stop.style.backgroundImage = `url("../../images/carousel_stop.png")`;
-  }
-});
-
 // recommend Swiper
 let recommendSwiper = new Swiper(".sw-recommend", {
   slidesPerView: 1,

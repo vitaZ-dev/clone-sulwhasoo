@@ -1,0 +1,47 @@
+{
+  "carousel_total": 4,
+  "carousel_1": {
+    "link": "#carousel01",
+    "img": "slide01.jpg",
+    "img_1024": "slide01_1024.jpg",
+    "media_1024": "1024px",
+    "img_720": "slide01_720.jpg",
+    "media_720": "720px",
+    "imgAlt": "slide01",
+    "title_top": "NEW BRAND FILM",
+    "title_main": "인삼, 아름다움 그리고 설화수"
+  },
+  "carousel_2": {
+    "link": "#carousel02",
+    "img": "slide02.jpg",
+    "img_1024": "slide02_1024.jpg",
+    "media_1024": "1024px",
+    "img_720": "slide02_720.jpg",
+    "media_720": "720px",
+    "imgAlt": "slide02",
+    "title_top": "SULWHASOO FIRST CARE ACTIVATING SERUM VI",
+    "title_main": "윤조에센스 6세대"
+  },
+  "carousel_3": {
+    "link": "#carousel03",
+    "img": "slide03.jpg",
+    "img_1024": "slide03_1024.jpg",
+    "media_1024": "1024px",
+    "img_720": "slide03_720.jpg",
+    "media_720": "720px",
+    "imgAlt": "slide03",
+    "title_top": "Global Ambassador",
+    "title_main": "설화수, 그리고 ROSÉ"
+  },
+  "carousel_4": {
+    "link": "#carousel04",
+    "img": "slide04.jpg",
+    "img_1024": "slide04_1024.jpg",
+    "media_1024": "1024px",
+    "img_720": "slide04_720.jpg",
+    "media_720": "720px",
+    "imgAlt": "slide04",
+    "title_top": "Amore mall (4.24-5.7)",
+    "title_main": "감사의 마음을 담아요"
+  }
+}

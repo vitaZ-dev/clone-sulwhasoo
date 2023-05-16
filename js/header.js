@@ -85,12 +85,9 @@ const selectIcon = document.querySelectorAll(".icon-select"); //+아이콘
 
 sideGnbBtn.forEach((li) => {
   li.addEventListener("click", (item) => {
-    let target = item.currentTarget;
-    let targetGnbSubArea = item.currentTarget.nextElementSibling;
-    let targetSelectIcon = item.currentTarget.children[1];
-    console.log(target); // li>a = Btn
-    console.log(targetGnbSubArea); //nav-gnb-sub-list
-    console.log(targetSelectIcon); //+icon-select
+    let target = item.currentTarget; // li>a = Btn
+    let targetGnbSubArea = item.currentTarget.nextElementSibling; //nav-gnb-sub-list
+    let targetSelectIcon = item.currentTarget.children[1]; //+icon-select
     if (targetGnbSubArea.classList.contains("show-area")) {
       target.classList.remove("li-active");
       targetGnbSubArea.classList.remove("show-area");
