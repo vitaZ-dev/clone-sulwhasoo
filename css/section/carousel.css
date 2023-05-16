@@ -96,7 +96,7 @@
   .carousel .slide-info {
     position: absolute;
     top: 0;
-    margin-top: 36%; /* 얘 다시 재야될 듯 */
+    margin-top: 36%;
     text-align: center;
   }
   .slide-info .inner {
@@ -114,7 +114,7 @@
 }
 @media screen and (max-width: 540px) {
   .carousel .slide-info {
-    margin-top: 32.8%; /* 얘 다시 재야될 듯 */
+    margin-top: 32.8%;
   }
 }
 .carousel .pagination-container {
