@@ -1,0 +1,51 @@
+{
+  "recommend_total": 6,
+  "recommend_1": {
+    "link": "#recommend01",
+    "img": "recommend01.jpg",
+    "imgAlt": "recommend01",
+    "title": "윤조에센스 6세대",
+    "desc": "First Care Activating Serum VI",
+    "price": "140,000"
+  },
+  "recommend_2": {
+    "link": "#recommend02",
+    "img": "recommend02.jpg",
+    "imgAlt": "recommend02",
+    "title": "자음생크림",
+    "desc": "Concentrated Ginseng Renewing Cream EX",
+    "price": "270,000"
+  },
+  "recommend_3": {
+    "link": "#recommend03",
+    "img": "recommend03.jpg",
+    "imgAlt": "recommend03",
+    "title": "자음생세럼",
+    "desc": "Concentrated Ginseng Renewing Serum EX",
+    "price": "220,000"
+  },
+  "recommend_4": {
+    "link": "#recommend04",
+    "img": "recommend04.jpg",
+    "imgAlt": "recommend04",
+    "title": "순행클렌징오일",
+    "desc": "Gentle Cleansing Oil",
+    "price": "47,000"
+  },
+  "recommend_5": {
+    "link": "#recommend05",
+    "img": "recommend05.jpg",
+    "imgAlt": "recommend05",
+    "title": "순행클렌징폼",
+    "desc": "Gentle Cleansing Foam",
+    "price": "42,000"
+  },
+  "recommend_6": {
+    "link": "#recommend06",
+    "img": "recommend06.jpg",
+    "imgAlt": "recommend06",
+    "title": "백삼팩",
+    "desc": "White Ginseng Radiance Refining Mask",
+    "price": "72,000"
+  }
+}

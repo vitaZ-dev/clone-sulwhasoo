@@ -13,7 +13,7 @@ function makeCarouselSlide() {
   let swCarouselHtml = ``;
   for (let i = 0; i < carouselData.carousel_total; i++) {
     let obj = carouselData[`carousel_${i + 1}`];
-    temp = `
+    let temp = `
 		<div class="swiper-slide">
 			<a href="${obj.link}">
 				<picture>
