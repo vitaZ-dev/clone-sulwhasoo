@@ -93,7 +93,6 @@
   }
 }
 @media (max-width: 1024px) {
- 
   .season-title {
     font-size: 16px;
   }
@@ -145,5 +144,18 @@
     width: calc(50% - 5px);
     height: 68.627vw;
     order: 2;
+  }
+}
+@media (max-width: 450px) {
+  .duo-title {
+    font-size: 15px;
+    padding: 0;
+  }
+  .duo-desc {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .season-info {
+    margin-top: 2%;
   }
 }
