@@ -1,7 +1,7 @@
 # clone-sulwhasoo
 
-<h1 align="center">Hi 👋,This is study project</h1>
-<h3 align="center">sulwhasoo site clone coding for studying project.</h3>
+<h1>Hi 👋,This is study project</h1>
+<h3>sulwhasoo site clone coding for studying project.</h3>
 
 - 🔭 I’m currently working on [site clone coding](www.sulwhasoo.com/kr/ko/index.html)
 
