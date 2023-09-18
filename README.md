@@ -1,18 +1,56 @@
-# clone-sulwhasoo
+# 협업을 통한 설화수 사이트 스터디 클론코딩
 
-<p>Hi 👋,This is study project</p>
-<p>sulwhasoo site clone coding for studying project.</p>
+<h3 align="left">👨‍💻 프로젝트 소개</h3>
 
-- 🔭 I’m currently working on [sulwhasoo site clone coding](https://www.sulwhasoo.com/kr/ko/index.html)
+#### 🔗 [완성된 사이트](https://vitaz-dev.github.io/clone-sulwhasoo)
 
-- 🌱 I’m currently learning **html, css, javascript, (will be react...)**
+##### 🌱 페이지 선정 기준
+
+- 배웠던 내용을 활용할 수 있는가?
+- 두 사람이 하기에 적당한 양인가?
+- 반응형이 구현되어 있는가?
+
+<h3 align="left">📚 담당 파트</h3>
+
+##### 황지현(팀장)
+
+- Header
+- Carousel
+- Recommand
+- Footer
+
+##### 정다혜(팀원)
+
+- Best-seller
+- Season
+- Store
+- SNS Carousel
+
+<h3 align="left">📚 기술 스택</h3>
+<div align=left>
+	<p>✨ Platforms & Languages ✨</p>
+</div>
+<div align="left">
+	<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white" />
+	<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
+	<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" />
+	<br />
+	<p>🔎 Library 🔎</p>
+	<img src="https://img.shields.io/badge/Swiper-6332F6?logo=Swiper&style=flat&logoColor=white" />
+</div>
+<br />
+<div align=left>
+	<p>🔧 Tools 🔧</p>
+	<img src="https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=VisualStudioCode&logoColor=white" />
+	<img src="https://img.shields.io/badge/Prettier-F7B93E?style=flat&logo=Prettier&logoColor=white" />
+	<img src="https://img.shields.io/badge/Eslint-4B32C3?style=flat&logo=eslint&logoColor=white" />
+  <br />
+	<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white" />
+	<img src="https://img.shields.io/badge/Sourcetree-0052CC?style=flat&logo=Sourcetree&logoColor=white" />
+	<img src="https://img.shields.io/badge/slack-4A154B?style=flat&logo=slack&logoColor=white" />
+	<img src="https://img.shields.io/badge/notion-000000?style=flat&logo=notion&logoColor=white" />
+</div>
+
+---
 
 - 📫 How to reach me **vitaminzdev@gmail.com**
-
-- 👨‍💻 All of my projects are available at [here](https://vitaz-dev.github.io/clone-sulwhasoo)
-
-
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> </p>
-
-<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=vitaz-dev&show_icons=true&locale=en&layout=compact" alt="vitaz-dev" /></p>
