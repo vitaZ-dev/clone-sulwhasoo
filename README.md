@@ -2,7 +2,7 @@
 
 <h3 align="left">👨‍💻 프로젝트 소개</h3>
 
-#### 🔗 [완성된 사이트](https://web-clone-sulwhasoo-rt92alkjme1ys.sel4.cloudtype.app/)
+#### 🔗 [완성된 사이트](https://clone-sulwhasoo.vercel.app/)
 
 ##### 🌱 페이지 선정 기준
 
